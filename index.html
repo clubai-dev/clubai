@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ClubAI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.container{
+    max-width:1000px;
+}
+
+.logo{
+    width:100px;
+    height:100px;
+    margin:auto;
+    margin-bottom:30px;
+    border-radius:24px;
+    background:linear-gradient(
+        135deg,
+        #06b6d4,
+        #2563eb,
+        #7c3aed
+    );
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+}
+
+h1{
+    font-size:5rem;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    max-width:700px;
+    margin:auto;
+    font-size:1.3rem;
+    color:#cbd5e1;
+}
+
+.buttons{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 32px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.2s;
+}
+
+.primary{
+    background:white;
+    color:#111827;
+}
+
+.secondary{
+    border:1px solid rgba(255,255,255,.2);
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.products{
+    background:white;
+    color:#111827;
+    padding:100px 20px;
+}
+
+.products h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:2.5rem;
+}
+
+.grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:24px;
+}
+
+.card{
+    padding:30px;
+    border-radius:20px;
+    background:#f8fafc;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.roadmap{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.roadmap h2{
+    margin-bottom:30px;
+}
+
+.roadmap p{
+    color:#cbd5e1;
+    max-width:700px;
+    margin:auto;
+}
+
+footer{
+    padding:40px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#94a3b8;
+}
+
+@media(max-width:768px){
+
+h1{
+    font-size:3rem;
+}
+
+.subtitle{
+    font-size:1rem;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="logo"></div>
+
+<h1>ClubAI</h1>
+
+<p class="subtitle">
+Xây dựng các công cụ AI đơn giản, hữu ích và dễ tiếp cận cho mọi người.
+WindowLite là sản phẩm đầu tiên trong hệ sinh thái ClubAI.
+</p>
+
+<div class="buttons">
+
+<a href="https://github.com/clubai-dev/windowlite"
+class="btn primary">
+GitHub
+</a>
+
+<a href="#products"
+class="btn secondary">
+Khám phá
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="products" class="products">
+
+<h2>Sản phẩm</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🌐 WindowLite</h3>
+<p>
+Trình duyệt tối giản được xây dựng bằng PyQt6.
+Nhanh, nhẹ và tập trung vào trải nghiệm.
+</p>
+</div>
+
+<div class="card">
+<h3>🤖 ClubAI Chat</h3>
+<p>
+Trợ lý AI đang được phát triển cho học tập,
+lập trình và sáng tạo nội dung.
+</p>
+</div>
+
+<div class="card">
+<h3>📝 ClubAI Notes</h3>
+<p>
+Ứng dụng ghi chú thông minh hỗ trợ AI.
+Sắp ra mắt.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="roadmap">
+
+<h2>Tầm nhìn</h2>
+
+<p>
+ClubAI hướng đến việc xây dựng một hệ sinh thái
+công cụ AI đơn giản, hiệu quả và dễ sử dụng.
+Từ trình duyệt WindowLite đến các ứng dụng AI
+phục vụ học tập, công việc và sáng tạo.
+</p>
+
+</section>
+
+<footer>
+
+© 2026 ClubAI Project
+
+</footer>
+
+</body>
+</html>
