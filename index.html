@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,15 +42,15 @@ body{
 .status{
     margin-top:12px;
     display:flex;
-    gap:10px;
     flex-wrap:wrap;
+    gap:10px;
 }
 
 .badge{
-    padding:6px 12px;
-    border-radius:20px;
     background:#1e293b;
     color:#cbd5e1;
+    padding:6px 12px;
+    border-radius:20px;
     font-size:13px;
 }
 
@@ -77,7 +78,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    font-weight:700;
+    font-weight:bold;
     flex-shrink:0;
 }
 
@@ -85,12 +86,16 @@ body{
     background:#10b981;
 }
 
-.chatgpt{
-    background:#10a37f;
+.user{
+    background:#2563eb;
 }
 
 .gemini{
     background:#4285f4;
+}
+
+.chatgpt{
+    background:#10a37f;
 }
 
 .claude{
@@ -114,7 +119,7 @@ body{
 
 .name{
     font-weight:700;
-    margin-bottom:10px;
+    margin-bottom:8px;
 }
 
 .text{
@@ -145,10 +150,10 @@ input{
 
 button{
     border:none;
-    border-radius:12px;
-    padding:0 24px;
     background:#2563eb;
     color:white;
+    padding:0 24px;
+    border-radius:12px;
     cursor:pointer;
 }
 
@@ -158,25 +163,15 @@ button:hover{
 
 .footer{
     text-align:center;
-    margin-top:10px;
-    font-size:12px;
     color:#64748b;
-}
-
-@media(max-width:768px){
-
-    .status{
-        gap:8px;
-    }
-
-    .bubble{
-        max-width:100%;
-    }
-
+    font-size:12px;
+    margin-top:10px;
 }
 
 </style>
+
 </head>
+
 <body>
 
 <div class="container">
@@ -211,7 +206,7 @@ button:hover{
 
     </div>
 
-    <div class="chat">
+    <div class="chat" id="chat">
 
         <div class="message">
 
@@ -227,15 +222,19 @@ button:hover{
 
                 <div class="text">
 
-                    👋 Xin chào và chào mừng đến với ClubAI.
+                    👋 Xin chào.
 
                     <br><br>
 
-                    ClubAI là trung tâm trò chuyện nơi nhiều AI có thể cùng hoạt động trong một giao diện thống nhất.
+                    Chào mừng bạn đến với ClubAI Chat.
 
                     <br><br>
 
-                    Giai đoạn đầu tiên sẽ kết nối Gemini trước, sau đó sẽ mở rộng sang ChatGPT, Claude, Perplexity và Meta AI.
+                    Mục tiêu của ClubAI là cho phép nhiều AI cùng tham gia trong một cuộc trò chuyện.
+
+                    <br><br>
+
+                    Hiện tại Gemini là AI đầu tiên được kết nối trong lộ trình phát triển.
 
                 </div>
 
@@ -256,25 +255,7 @@ button:hover{
                 </div>
 
                 <div class="text">
-
-                    Vai trò:
-
-                    <br>
-
-                    • Google AI Assistant
-
-                    <br>
-
-                    • Hỗ trợ học tập
-
-                    <br>
-
-                    • Lập trình
-
-                    <br>
-
-                    • Tìm kiếm thông tin
-
+                    Sẵn sàng kết nối với ClubAI.
                 </div>
 
             </div>
@@ -294,21 +275,7 @@ button:hover{
                 </div>
 
                 <div class="text">
-
-                    Vai trò:
-
-                    <br>
-
-                    • Trợ lý tổng quát
-
-                    <br>
-
-                    • Viết nội dung
-
-                    <br>
-
-                    • Hỗ trợ công việc và sáng tạo
-
+                    Dự kiến hỗ trợ trong các phiên bản tiếp theo.
                 </div>
 
             </div>
@@ -328,21 +295,7 @@ button:hover{
                 </div>
 
                 <div class="text">
-
-                    Vai trò:
-
-                    <br>
-
-                    • Phân tích chuyên sâu
-
-                    <br>
-
-                    • Tổng hợp tài liệu dài
-
-                    <br>
-
-                    • Xử lý nội dung phức tạp
-
+                    Chưa được kết nối.
                 </div>
 
             </div>
@@ -362,21 +315,7 @@ button:hover{
                 </div>
 
                 <div class="text">
-
-                    Vai trò:
-
-                    <br>
-
-                    • Nghiên cứu
-
-                    <br>
-
-                    • Tìm kiếm có nguồn
-
-                    <br>
-
-                    • Khám phá kiến thức
-
+                    Chưa được kết nối.
                 </div>
 
             </div>
@@ -396,21 +335,7 @@ button:hover{
                 </div>
 
                 <div class="text">
-
-                    Vai trò:
-
-                    <br>
-
-                    • Hỏi đáp tổng quát
-
-                    <br>
-
-                    • Hỗ trợ sáng tạo
-
-                    <br>
-
-                    • Nội dung mạng xã hội
-
+                    Chưa được kết nối.
                 </div>
 
             </div>
@@ -431,15 +356,15 @@ button:hover{
 
                 <div class="text">
 
-                    ✅ Gemini là AI đầu tiên được kết nối với ClubAI.
+                    ✅ Gemini là AI đầu tiên được triển khai.
 
                     <br><br>
 
-                    ⏳ ChatGPT, Claude, Perplexity và Meta AI sẽ được bổ sung trong các phiên bản tiếp theo.
+                    ⏳ ChatGPT, Claude, Perplexity và Meta AI sẽ được bổ sung sau.
 
                     <br><br>
 
-                    🎯 Mục tiêu của ClubAI là cho phép người dùng đặt một câu hỏi và nhận được nhiều góc nhìn từ nhiều AI khác nhau trong cùng một cuộc trò chuyện.
+                    🎯 Một câu hỏi, nhiều góc nhìn.
 
                 </div>
 
@@ -456,7 +381,7 @@ button:hover{
             <input
                 id="messageInput"
                 type="text"
-                placeholder="Nhập tin nhắn cho ClubAI..."
+                placeholder="Nhập tin nhắn..."
             >
 
             <button id="sendButton">
@@ -475,20 +400,98 @@ button:hover{
 
 <script>
 
-document.getElementById("sendButton")
-.addEventListener("click", () => {
+const input = document.getElementById("messageInput");
+const button = document.getElementById("sendButton");
+const chat = document.getElementById("chat");
 
-    const input =
-        document.getElementById("messageInput");
+function scrollToBottom(){
+    chat.scrollTop = chat.scrollHeight;
+}
 
-    if(input.value.trim() === "")
+function addMessage(sender, text, avatarClass, avatarIcon){
+
+    const message = document.createElement("div");
+
+    message.className = "message";
+
+    message.innerHTML = `
+        <div class="avatar ${avatarClass}">
+            ${avatarIcon}
+        </div>
+
+        <div class="bubble">
+            <div class="name">
+                ${sender}
+            </div>
+
+            <div class="text">
+                ${text}
+            </div>
+        </div>
+    `;
+
+    chat.appendChild(message);
+
+    scrollToBottom();
+
+    return message;
+}
+
+function sendMessage(){
+
+    const text = input.value.trim();
+
+    if(text === "")
         return;
 
-    alert(
-        "Gemini backend sẽ được kết nối ở bước tiếp theo."
+    addMessage(
+        "Bạn",
+        text,
+        "user",
+        "U"
     );
 
-});
+    input.value = "";
+
+    const thinkingMessage = addMessage(
+        "Gemini 🟢 Online",
+        "Đang suy nghĩ...",
+        "gemini",
+        "✨"
+    );
+
+    setTimeout(() => {
+
+        const reply =
+            thinkingMessage.querySelector(".text");
+
+        reply.innerHTML =
+            "Mình đã nhận được tin nhắn của bạn.<br><br>" +
+            "Bước tiếp theo sẽ là kết nối Gemini API thật để ClubAI có thể trả lời tự động.";
+
+        scrollToBottom();
+
+    }, 1200);
+
+}
+
+button.addEventListener(
+    "click",
+    sendMessage
+);
+
+input.addEventListener(
+    "keydown",
+    function(e){
+
+        if(e.key === "Enter"){
+            sendMessage();
+        }
+
+    }
+);
+
+scrollToBottom();
 
 </script>
 
