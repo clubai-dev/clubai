@@ -1,333 +1,27 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="messages">
 
-<title>ClubAI Chat</title>
+    <div class="message">
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    background:#0f172a;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#fff;
-}
-
-.chat-app{
-    width:100%;
-    max-width:1000px;
-    height:90vh;
-    background:#111827;
-    border-radius:20px;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    box-shadow:0 20px 60px rgba(0,0,0,.4);
-}
-
-.header{
-    padding:20px;
-    border-bottom:1px solid #1e293b;
-    background:#0b1220;
-}
-
-.header h1{
-    font-size:24px;
-}
-
-.header p{
-    color:#94a3b8;
-    margin-top:6px;
-}
-
-.messages{
-    flex:1;
-    overflow-y:auto;
-    padding:25px;
-}
-
-.message{
-    display:flex;
-    gap:15px;
-    margin-bottom:25px;
-}
-
-.avatar{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    flex-shrink:0;
-}
-
-.user-avatar{
-    background:#2563eb;
-}
-
-.ai-avatar{
-    background:#7c3aed;
-}
-
-.gemini-avatar{
-    background:#06b6d4;
-}
-
-.clubai-avatar{
-    background:#10b981;
-}
-
-.bubble{
-    background:#1e293b;
-    padding:15px;
-    border-radius:15px;
-    flex:1;
-}
-
-.name{
-    font-weight:700;
-    margin-bottom:8px;
-}
-
-.text{
-    line-height:1.6;
-    color:#e2e8f0;
-}
-
-.cards{
-    margin-top:20px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:12px;
-}
-
-.card{
-    background:#0f172a;
-    border:1px solid #334155;
-    border-radius:12px;
-    padding:15px;
-    text-decoration:none;
-    color:#fff;
-    transition:.2s;
-}
-
-.card:hover{
-    border-color:#60a5fa;
-    transform:translateY(-2px);
-}
-
-.card-title{
-    font-weight:600;
-    margin-bottom:8px;
-}
-
-.card-desc{
-    font-size:14px;
-    color:#94a3b8;
-}
-
-.compose{
-    padding:20px;
-    border-top:1px solid #1e293b;
-    background:#111827;
-}
-
-.input-row{
-    display:flex;
-    gap:10px;
-}
-
-input{
-    flex:1;
-    padding:14px;
-    border:none;
-    border-radius:12px;
-    background:#1e293b;
-    color:white;
-    outline:none;
-}
-
-button{
-    border:none;
-    background:#2563eb;
-    color:white;
-    padding:0 25px;
-    border-radius:12px;
-    cursor:pointer;
-}
-
-.footer{
-    text-align:center;
-    font-size:12px;
-    color:#64748b;
-    margin-top:12px;
-}
-
-@media(max-width:768px){
-
-.messages{
-    padding:15px;
-}
-
-.card{
-    min-height:auto;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="chat-app">
-
-    <div class="header">
-        <h1>🤖 ClubAI Chat</h1>
-        <p>Community • AI • WindowLite</p>
-    </div>
-
-    <div class="messages">
-
-        <div class="message">
-
-            <div class="avatar clubai-avatar">
-                C
-            </div>
-
-            <div class="bubble">
-
-                <div class="name">
-                    ClubAI
-                </div>
-
-                <div class="text">
-                    Xin chào 👋<br><br>
-
-                    Chào mừng bạn đến với ClubAI.
-
-                    Đây là trung tâm của hệ sinh thái ClubAI
-                    và WindowLite Browser.
-
-                    Bạn có thể truy cập các dịch vụ bên dưới:
-                </div>
-
-                <div class="cards">
-
-                    <a
-                    class="card"
-                    href="https://github.com/clubai-dev/windowlite"
-                    target="_blank">
-
-                        <div class="card-title">
-                            🌐 WindowLite
-                        </div>
-
-                        <div class="card-desc">
-                            Trình duyệt được xây dựng bằng PyQt6
-                        </div>
-
-                    </a>
-
-                    <a
-                    class="card"
-                    href="https://github.com/clubai-dev"
-                    target="_blank">
-
-                        <div class="card-title">
-                            💻 GitHub
-                        </div>
-
-                        <div class="card-desc">
-                            Kho mã nguồn ClubAI
-                        </div>
-
-                    </a>
-
-                    <a
-                    class="card"
-                    href="https://copilot.microsoft.com"
-                    target="_blank">
-
-                        <div class="card-title">
-                            🤖 Copilot
-                        </div>
-
-                        <div class="card-desc">
-                            Trò chuyện với AI
-                        </div>
-
-                    </a>
-
-                    <a
-                    class="card"
-                    href="https://gemini.google.com"
-                    target="_blank">
-
-                        <div class="card-title">
-                            ✨ Gemini
-                        </div>
-
-                        <div class="card-desc">
-                            Google Gemini AI
-                        </div>
-
-                    </a>
-
-                </div>
-
-            </div>
-
+        <div class="avatar clubai-avatar">
+            C
         </div>
 
-        <div class="message">
+        <div class="bubble">
 
-            <div class="avatar ai-avatar">
-                🤖
+            <div class="name">
+                ClubAI
             </div>
 
-            <div class="bubble">
+            <div class="text">
 
-                <div class="name">
-                    Copilot
-                </div>
+                👋 Chào mừng đến với ClubAI.
 
-                <div class="text">
-                    Chào mừng đến với ClubAI Chat.
-                </div>
+                Đây là trung tâm trò chuyện nơi bạn có thể trao đổi
+                với nhiều AI trong cùng một cuộc hội thoại.
 
-            </div>
+                <br><br>
 
-        </div>
-
-        <div class="message">
-
-            <div class="avatar gemini-avatar">
-                ✨
-            </div>
-
-            <div class="bubble">
-
-                <div class="name">
-                    Gemini
-                </div>
-
-                <div class="text">
-                    Sẵn sàng kết nối trong tương lai.
-                </div>
+                Hiện tại đây là giao diện mô phỏng cho hệ sinh thái ClubAI.
 
             </div>
 
@@ -335,28 +29,167 @@ button{
 
     </div>
 
-    <div class="compose">
 
-        <div class="input-row">
+    <div class="message">
 
-            <input
-                type="text"
-                placeholder="Nhập tin nhắn..."
-            >
+        <div class="avatar user-avatar">
+            U
+        </div>
 
-            <button>
-                Gửi
-            </button>
+        <div class="bubble">
+
+            <div class="name">
+                Bạn
+            </div>
+
+            <div class="text">
+                Xin chào ClubAI!
+            </div>
 
         </div>
 
-        <div class="footer">
-            ClubAI Project © 2026
+    </div>
+
+
+    <div class="message">
+
+        <div class="avatar ai-avatar">
+            🤖
+        </div>
+
+        <div class="bubble">
+
+            <div class="name">
+                ChatGPT
+            </div>
+
+            <div class="text">
+                Xin chào 👋
+                Tôi có thể hỗ trợ lập trình, học tập,
+                sáng tạo nội dung và giải quyết vấn đề.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="message">
+
+        <div class="avatar gemini-avatar">
+            ✨
+        </div>
+
+        <div class="bubble">
+
+            <div class="name">
+                Gemini
+            </div>
+
+            <div class="text">
+                Chào bạn.
+                Tôi hỗ trợ tìm kiếm thông tin và phân tích dữ liệu.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="message">
+
+        <div class="avatar">
+            🧠
+        </div>
+
+        <div class="bubble">
+
+            <div class="name">
+                Claude
+            </div>
+
+            <div class="text">
+                Tôi phù hợp với các cuộc trao đổi dài,
+                tài liệu và phân tích chuyên sâu.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="message">
+
+        <div class="avatar">
+            🔍
+        </div>
+
+        <div class="bubble">
+
+            <div class="name">
+                Perplexity
+            </div>
+
+            <div class="text">
+                Tôi tập trung vào nghiên cứu và truy xuất thông tin có nguồn tham khảo.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="message">
+
+        <div class="avatar">
+            ∞
+        </div>
+
+        <div class="bubble">
+
+            <div class="name">
+                Meta AI
+            </div>
+
+            <div class="text">
+                Tôi hỗ trợ hỏi đáp và sáng tạo nội dung đa dạng.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="message">
+
+        <div class="avatar clubai-avatar">
+            C
+        </div>
+
+        <div class="bubble">
+
+            <div class="name">
+                ClubAI Summary
+            </div>
+
+            <div class="text">
+
+                ✅ ChatGPT: Trợ giúp tổng quát<br>
+                ✅ Gemini: Tìm kiếm & phân tích<br>
+                ✅ Claude: Tài liệu dài<br>
+                ✅ Perplexity: Nghiên cứu có nguồn<br>
+                ✅ Meta AI: Hỏi đáp & sáng tạo<br>
+
+                <br>
+
+                🚀 ClubAI sẽ đóng vai trò kết nối,
+                tổng hợp và điều phối các AI trong
+                cùng một giao diện.
+
+            </div>
+
         </div>
 
     </div>
 
 </div>
-
-</body>
-</html>
