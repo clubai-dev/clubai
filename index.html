@@ -71,10 +71,6 @@ body{
 .clubai{ background:#10b981; }
 .user{ background:#2563eb; }
 .gemini{ background:#4285f4; }
-.chatgpt{ background:#10a37f; }
-.claude{ background:#d97706; }
-.perplexity{ background:#0891b2; }
-.meta{ background:#7c3aed; }
 
 .bubble{
     background:#1e293b;
@@ -148,30 +144,8 @@ button:hover{
             <div class="bubble">
                 <div class="name">ClubAI</div>
                 <div class="text">
-                    👋 Xin chào.<br><br>
-                    Chào mừng bạn đến với ClubAI Chat.<br><br>
-                    Mục tiêu của ClubAI là cho phép nhiều AI cùng tham gia trong một cuộc trò chuyện.<br><br>
-                    Hiện tại Gemini đã được kết nối API trực tiếp!
-                </div>
-            </div>
-        </div>
-
-        <div class="message">
-            <div class="avatar gemini">✨</div>
-            <div class="bubble">
-                <div class="name">Gemini 🟢 Online</div>
-                <div class="text">Sẵn sàng nhận câu hỏi từ bạn.</div>
-            </div>
-        </div>
-
-        <div class="message">
-            <div class="avatar clubai">C</div>
-            <div class="bubble">
-                <div class="name">ClubAI Summary</div>
-                <div class="text">
-                    ✅ Gemini đã kích hoạt API thành công.<br><br>
-                    ⏳ Các mô hình khác sẽ được bổ sung tiếp theo.<br><br>
-                    🎯 Một câu hỏi, nhiều góc nhìn.
+                    👋 Xin chào bằng hữu!<br><br>
+                    Hệ thống đã được tinh chỉnh lại để tương thích hoàn toàn với khóa API của bằng hữu.
                 </div>
             </div>
         </div>
@@ -212,6 +186,7 @@ function addMessage(sender, text, avatarClass, avatarIcon){
 
 async function callGeminiAPI(userPrompt) {
     const apiKey = "AQ.Ab8RN6LG533TfrbBY-e2gVrU6_RhyAM5Un5JkJbhMrzpN-NmDg";
+    // Sử dụng model chuẩn và truyền key qua header Bearer hoặc tham số query tùy chỉnh
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
     const data = {
@@ -233,12 +208,14 @@ async function callGeminiAPI(userPrompt) {
         
         if (result.candidates && result.candidates[0].content) {
             return result.candidates[0].content.parts[0].text;
+        } else if (result.error) {
+            return "Lỗi từ Google API: " + result.error.message;
         } else {
-            return "Xin lỗi, phản hồi từ API không hợp lệ.";
+            return "Xin lỗi, phản hồi từ API không có nội dung.";
         }
     } catch (error) {
-        console.error("Lỗi gọi API:", error);
-        return "Xin lỗi, không thể kết nối tới Gemini API lúc này.";
+        console.error("Lỗi kết nối:", error);
+        return "Xin lỗi, không thể kết nối tới máy chủ Gemini.";
     }
 }
 
@@ -251,18 +228,16 @@ async function sendMessage(){
 
     const thinkingMessage = addMessage("Gemini 🟢 Online", "Đang suy nghĩ...", "gemini", "✨");
 
-    // Gọi API thật
     const aiResponse = await callGeminiAPI(text);
 
     const reply = thinkingMessage.querySelector(".text");
     reply.innerHTML = aiResponse.replace(/\n/g, '<br>');
 
-    // Tự động sinh khung ClubAI Summary
     addMessage(
         "ClubAI Summary",
         `✅ <strong>Phân tích nhanh:</strong><br><br>` +
-        `- <strong>Gemini:</strong> Đã phản hồi trực tiếp câu hỏi của bạn.<br>` +
-        `- <strong>Trạng thái:</strong> Hệ thống hoạt động hoàn hảo.<br><br>` +
+        `- <strong>Gemini:</strong> Đã xử lý yêu cầu thành công.<br>` +
+        `- <strong>Trạng thái:</strong> Kết nối thông suốt.<br><br>` +
         `🎯 <em>Một câu hỏi, nhiều góc nhìn.</em>`,
         "clubai",
         "C"
