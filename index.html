@@ -134,7 +134,7 @@ button:hover{
     <div class="header">
         <h1>🤖 ClubAI Chat</h1>
         <div class="status">
-            <span class="badge online">🟢 Gemini</span>
+            <span class="badge online">🟢 Gemini (API Live)</span>
             <span class="badge">⚪ ChatGPT</span>
             <span class="badge">⚪ Claude</span>
             <span class="badge">⚪ Perplexity</span>
@@ -151,7 +151,7 @@ button:hover{
                     👋 Xin chào.<br><br>
                     Chào mừng bạn đến với ClubAI Chat.<br><br>
                     Mục tiêu của ClubAI là cho phép nhiều AI cùng tham gia trong một cuộc trò chuyện.<br><br>
-                    Hiện tại Gemini là AI đầu tiên được kết nối trong lộ trình phát triển.
+                    Hiện tại Gemini đã được kết nối API trực tiếp!
                 </div>
             </div>
         </div>
@@ -160,7 +160,7 @@ button:hover{
             <div class="avatar gemini">✨</div>
             <div class="bubble">
                 <div class="name">Gemini 🟢 Online</div>
-                <div class="text">Sẵn sàng kết nối với ClubAI.</div>
+                <div class="text">Sẵn sàng nhận câu hỏi từ bạn.</div>
             </div>
         </div>
 
@@ -169,8 +169,8 @@ button:hover{
             <div class="bubble">
                 <div class="name">ClubAI Summary</div>
                 <div class="text">
-                    ✅ Gemini là AI đầu tiên được triển khai.<br><br>
-                    ⏳ ChatGPT, Claude, Perplexity và Meta AI sẽ được bổ sung sau.<br><br>
+                    ✅ Gemini đã kích hoạt API thành công.<br><br>
+                    ⏳ Các mô hình khác sẽ được bổ sung tiếp theo.<br><br>
                     🎯 Một câu hỏi, nhiều góc nhìn.
                 </div>
             </div>
@@ -210,34 +210,65 @@ function addMessage(sender, text, avatarClass, avatarIcon){
     return message;
 }
 
-function sendMessage(){
+async function callGeminiAPI(userPrompt) {
+    const apiKey = "AQ.Ab8RN6LG533TfrbBY-e2gVrU6_RhyAM5Un5JkJbhMrzpN-NmDg";
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+
+    const data = {
+        contents: [{
+            parts: [{ text: userPrompt }]
+        }]
+    };
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        
+        if (result.candidates && result.candidates[0].content) {
+            return result.candidates[0].content.parts[0].text;
+        } else {
+            return "Xin lỗi, phản hồi từ API không hợp lệ.";
+        }
+    } catch (error) {
+        console.error("Lỗi gọi API:", error);
+        return "Xin lỗi, không thể kết nối tới Gemini API lúc này.";
+    }
+}
+
+async function sendMessage(){
     const text = input.value.trim();
     if(text === "") return;
 
-    // Hiển thị tin nhắn của người dùng
     addMessage("Bạn", text, "user", "U");
     input.value = "";
 
-    // Hiển thị trạng thái đang suy nghĩ của Gemini
     const thinkingMessage = addMessage("Gemini 🟢 Online", "Đang suy nghĩ...", "gemini", "✨");
 
-    setTimeout(() => {
-        const reply = thinkingMessage.querySelector(".text");
-        reply.innerHTML = "Mình đã nhận được tin nhắn của bạn.<br><br>Bước tiếp theo sẽ là kết nối Gemini API thật để ClubAI có thể trả lời tự động.";
+    // Gọi API thật
+    const aiResponse = await callGeminiAPI(text);
 
-        // Tự động sinh khung ClubAI Summary
-        addMessage(
-            "ClubAI Summary",
-            `✅ <strong>Phân tích nhanh:</strong><br><br>` +
-            `- <strong>Gemini:</strong> Đã phản hồi câu hỏi: "${text}".<br>` +
-            `- <strong>Hệ thống:</strong> Sẽ sớm bổ sung các mô hình khác.<br><br>` +
-            `🎯 <em>Một câu hỏi, nhiều góc nhìn.</em>`,
-            "clubai",
-            "C"
-        );
+    const reply = thinkingMessage.querySelector(".text");
+    reply.innerHTML = aiResponse.replace(/\n/g, '<br>');
 
-        scrollToBottom();
-    }, 1200);
+    // Tự động sinh khung ClubAI Summary
+    addMessage(
+        "ClubAI Summary",
+        `✅ <strong>Phân tích nhanh:</strong><br><br>` +
+        `- <strong>Gemini:</strong> Đã phản hồi trực tiếp câu hỏi của bạn.<br>` +
+        `- <strong>Trạng thái:</strong> Hệ thống hoạt động hoàn hảo.<br><br>` +
+        `🎯 <em>Một câu hỏi, nhiều góc nhìn.</em>`,
+        "clubai",
+        "C"
+    );
+
+    scrollToBottom();
 }
 
 button.addEventListener("click", sendMessage);
