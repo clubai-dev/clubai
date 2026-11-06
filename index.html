@@ -4,17 +4,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>ClubAI Chat</title>
-
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
-
 body{
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     background:#0f172a;
@@ -22,30 +18,25 @@ body{
     height:100vh;
     overflow:hidden;
 }
-
 .container{
     height:100vh;
     display:flex;
     flex-direction:column;
 }
-
 .header{
     background:#111827;
     border-bottom:1px solid #1f2937;
     padding:20px;
 }
-
 .header h1{
     font-size:24px;
 }
-
 .status{
     margin-top:12px;
     display:flex;
     flex-wrap:wrap;
     gap:10px;
 }
-
 .badge{
     background:#1e293b;
     color:#cbd5e1;
@@ -53,24 +44,20 @@ body{
     border-radius:20px;
     font-size:13px;
 }
-
 .badge.online{
     color:#22c55e;
     border:1px solid #22c55e;
 }
-
 .chat{
     flex:1;
     overflow-y:auto;
     padding:20px;
 }
-
 .message{
     display:flex;
     gap:12px;
     margin-bottom:20px;
 }
-
 .avatar{
     width:44px;
     height:44px;
@@ -81,34 +68,13 @@ body{
     font-weight:bold;
     flex-shrink:0;
 }
-
-.clubai{
-    background:#10b981;
-}
-
-.user{
-    background:#2563eb;
-}
-
-.gemini{
-    background:#4285f4;
-}
-
-.chatgpt{
-    background:#10a37f;
-}
-
-.claude{
-    background:#d97706;
-}
-
-.perplexity{
-    background:#0891b2;
-}
-
-.meta{
-    background:#7c3aed;
-}
+.clubai{ background:#10b981; }
+.user{ background:#2563eb; }
+.gemini{ background:#4285f4; }
+.chatgpt{ background:#10a37f; }
+.claude{ background:#d97706; }
+.perplexity{ background:#0891b2; }
+.meta{ background:#7c3aed; }
 
 .bubble{
     background:#1e293b;
@@ -116,28 +82,23 @@ body{
     border-radius:16px;
     max-width:850px;
 }
-
 .name{
     font-weight:700;
     margin-bottom:8px;
 }
-
 .text{
     color:#e2e8f0;
     line-height:1.7;
 }
-
 .input-area{
     background:#111827;
     border-top:1px solid #1f2937;
     padding:16px;
 }
-
 .input-wrapper{
     display:flex;
     gap:10px;
 }
-
 input{
     flex:1;
     padding:14px;
@@ -147,7 +108,6 @@ input{
     color:white;
     outline:none;
 }
-
 button{
     border:none;
     background:#2563eb;
@@ -156,387 +116,139 @@ button{
     border-radius:12px;
     cursor:pointer;
 }
-
 button:hover{
     background:#1d4ed8;
 }
-
 .footer{
     text-align:center;
     color:#64748b;
     font-size:12px;
     margin-top:10px;
 }
-
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
-
     <div class="header">
-
         <h1>🤖 ClubAI Chat</h1>
-
         <div class="status">
-
-            <span class="badge online">
-                🟢 Gemini
-            </span>
-
-            <span class="badge">
-                ⚪ ChatGPT
-            </span>
-
-            <span class="badge">
-                ⚪ Claude
-            </span>
-
-            <span class="badge">
-                ⚪ Perplexity
-            </span>
-
-            <span class="badge">
-                ⚪ Meta AI
-            </span>
-
+            <span class="badge online">🟢 Gemini</span>
+            <span class="badge">⚪ ChatGPT</span>
+            <span class="badge">⚪ Claude</span>
+            <span class="badge">⚪ Perplexity</span>
+            <span class="badge">⚪ Meta AI</span>
         </div>
-
     </div>
 
     <div class="chat" id="chat">
-
         <div class="message">
-
-            <div class="avatar clubai">
-                C
-            </div>
-
+            <div class="avatar clubai">C</div>
             <div class="bubble">
-
-                <div class="name">
-                    ClubAI
-                </div>
-
+                <div class="name">ClubAI</div>
                 <div class="text">
-
-                    👋 Xin chào.
-
-                    <br><br>
-
-                    Chào mừng bạn đến với ClubAI Chat.
-
-                    <br><br>
-
-                    Mục tiêu của ClubAI là cho phép nhiều AI cùng tham gia trong một cuộc trò chuyện.
-
-                    <br><br>
-
+                    👋 Xin chào.<br><br>
+                    Chào mừng bạn đến với ClubAI Chat.<br><br>
+                    Mục tiêu của ClubAI là cho phép nhiều AI cùng tham gia trong một cuộc trò chuyện.<br><br>
                     Hiện tại Gemini là AI đầu tiên được kết nối trong lộ trình phát triển.
-
                 </div>
-
             </div>
-
         </div>
 
         <div class="message">
-
-            <div class="avatar gemini">
-                ✨
-            </div>
-
+            <div class="avatar gemini">✨</div>
             <div class="bubble">
-
-                <div class="name">
-                    Gemini 🟢 Online
-                </div>
-
-                <div class="text">
-                    Sẵn sàng kết nối với ClubAI.
-                </div>
-
+                <div class="name">Gemini 🟢 Online</div>
+                <div class="text">Sẵn sàng kết nối với ClubAI.</div>
             </div>
-
         </div>
 
         <div class="message">
-
-            <div class="avatar chatgpt">
-                🤖
-            </div>
-
+            <div class="avatar clubai">C</div>
             <div class="bubble">
-
-                <div class="name">
-                    ChatGPT ⚪ Planned
-                </div>
-
+                <div class="name">ClubAI Summary</div>
                 <div class="text">
-                    Dự kiến hỗ trợ trong các phiên bản tiếp theo.
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="message">
-
-            <div class="avatar claude">
-                🧠
-            </div>
-
-            <div class="bubble">
-
-                <div class="name">
-                    Claude ⚪ Planned
-                </div>
-
-                <div class="text">
-                    Chưa được kết nối.
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="message">
-
-            <div class="avatar perplexity">
-                🔍
-            </div>
-
-            <div class="bubble">
-
-                <div class="name">
-                    Perplexity ⚪ Planned
-                </div>
-
-                <div class="text">
-                    Chưa được kết nối.
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="message">
-
-            <div class="avatar meta">
-                ∞
-            </div>
-
-            <div class="bubble">
-
-                <div class="name">
-                    Meta AI ⚪ Planned
-                </div>
-
-                <div class="text">
-                    Chưa được kết nối.
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="message">
-
-            <div class="avatar clubai">
-                C
-            </div>
-
-            <div class="bubble">
-
-                <div class="name">
-                    ClubAI Summary
-                </div>
-
-                <div class="text">
-
-                    ✅ Gemini là AI đầu tiên được triển khai.
-
-                    <br><br>
-
-                    ⏳ ChatGPT, Claude, Perplexity và Meta AI sẽ được bổ sung sau.
-
-                    <br><br>
-
+                    ✅ Gemini là AI đầu tiên được triển khai.<br><br>
+                    ⏳ ChatGPT, Claude, Perplexity và Meta AI sẽ được bổ sung sau.<br><br>
                     🎯 Một câu hỏi, nhiều góc nhìn.
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
     <div class="input-area">
-
         <div class="input-wrapper">
-
-            <input
-                id="messageInput"
-                type="text"
-                placeholder="Nhập tin nhắn..."
-            >
-
-            <button id="sendButton">
-                Gửi
-            </button>
-
+            <input id="messageInput" type="text" placeholder="Nhập tin nhắn...">
+            <button id="sendButton">Gửi</button>
         </div>
-
-        <div class="footer">
-            ClubAI Project © 2026
-        </div>
-
+        <div class="footer">ClubAI Project © 2026</div>
     </div>
-
 </div>
 
 <script>
-
-function sendMessage(){
-
-    const text = input.value.trim();
-
-    if(text === "")
-        return;
-
-    addMessage(
-        "Bạn",
-        text,
-        "user",
-        "U"
-    );
-
-    input.value = "";
-
-    const thinkingMessage = addMessage(
-        "Gemini 🟢 Online",
-        "Đang suy nghĩ...",
-        "gemini",
-        "✨"
-    );
-
-    setTimeout(() => {
-
-        const reply = thinkingMessage.querySelector(".text");
-
-        const geminiResponseText = "Mình đã nhận được tin nhắn của bạn.<br><br>Bước tiếp theo sẽ là kết nối Gemini API thật để ClubAI có thể trả lời tự động.";
-        
-        reply.innerHTML = geminiResponseText;
-
-        // Tự động tạo khung ClubAI Summary tổng hợp ngay sau khi có phản hồi
-        addMessage(
-            "ClubAI Summary",
-            `✅ <strong>Phân tích nhanh:</strong><br><br>` +
-            `- <strong>Gemini:</strong> Đã phản hồi thành công câu hỏi: "${text}".<br>` +
-            `- <strong>Trạng thái hệ thống:</strong> Các mô hình khác (ChatGPT, Claude, Perplexity, Meta AI) sẽ sớm được tích hợp để tạo ra đa góc nhìn đầy đủ nhất.<br><br>` +
-            `🎯 <em>Một câu hỏi, nhiều góc nhìn.</em>`,
-            "clubai",
-            "C"
-        );
-
-        scrollToBottom();
-
-    }, 1200);
-
-}
+const input = document.getElementById("messageInput");
+const button = document.getElementById("sendButton");
+const chat = document.getElementById("chat");
 
 function scrollToBottom(){
     chat.scrollTop = chat.scrollHeight;
 }
 
 function addMessage(sender, text, avatarClass, avatarIcon){
-
     const message = document.createElement("div");
-
     message.className = "message";
-
     message.innerHTML = `
-        <div class="avatar ${avatarClass}">
-            ${avatarIcon}
-        </div>
-
+        <div class="avatar ${avatarClass}">${avatarIcon}</div>
         <div class="bubble">
-            <div class="name">
-                ${sender}
-            </div>
-
-            <div class="text">
-                ${text}
-            </div>
+            <div class="name">${sender}</div>
+            <div class="text">${text}</div>
         </div>
     `;
-
     chat.appendChild(message);
-
     scrollToBottom();
-
     return message;
 }
 
 function sendMessage(){
-
     const text = input.value.trim();
+    if(text === "") return;
 
-    if(text === "")
-        return;
-
-    addMessage(
-        "Bạn",
-        text,
-        "user",
-        "U"
-    );
-
+    // Hiển thị tin nhắn của người dùng
+    addMessage("Bạn", text, "user", "U");
     input.value = "";
 
-    const thinkingMessage = addMessage(
-        "Gemini 🟢 Online",
-        "Đang suy nghĩ...",
-        "gemini",
-        "✨"
-    );
+    // Hiển thị trạng thái đang suy nghĩ của Gemini
+    const thinkingMessage = addMessage("Gemini 🟢 Online", "Đang suy nghĩ...", "gemini", "✨");
 
     setTimeout(() => {
+        const reply = thinkingMessage.querySelector(".text");
+        reply.innerHTML = "Mình đã nhận được tin nhắn của bạn.<br><br>Bước tiếp theo sẽ là kết nối Gemini API thật để ClubAI có thể trả lời tự động.";
 
-        const reply =
-            thinkingMessage.querySelector(".text");
-
-        reply.innerHTML =
-            "Mình đã nhận được tin nhắn của bạn.<br><br>" +
-            "Bước tiếp theo sẽ là kết nối Gemini API thật để ClubAI có thể trả lời tự động.";
+        // Tự động sinh khung ClubAI Summary
+        addMessage(
+            "ClubAI Summary",
+            `✅ <strong>Phân tích nhanh:</strong><br><br>` +
+            `- <strong>Gemini:</strong> Đã phản hồi câu hỏi: "${text}".<br>` +
+            `- <strong>Hệ thống:</strong> Sẽ sớm bổ sung các mô hình khác.<br><br>` +
+            `🎯 <em>Một câu hỏi, nhiều góc nhìn.</em>`,
+            "clubai",
+            "C"
+        );
 
         scrollToBottom();
-
     }, 1200);
-
 }
 
-button.addEventListener(
-    "click",
-    sendMessage
-);
+button.addEventListener("click", sendMessage);
 
-input.addEventListener(
-    "keydown",
-    function(e){
-
-        if(e.key === "Enter"){
-            sendMessage();
-        }
-
+input.addEventListener("keydown", function(e){
+    if(e.key === "Enter"){
+        sendMessage();
     }
-);
+});
 
 scrollToBottom();
-
 </script>
 
 </body>
