@@ -1,261 +1,106 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ClubAI Chat</title>
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    background:#0f172a;
-    color:white;
-    height:100vh;
-    overflow:hidden;
-}
-.container{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-}
-.header{
-    background:#111827;
-    border-bottom:1px solid #1f2937;
-    padding:20px;
-}
-.header h1{
-    font-size:24px;
-}
-.status{
-    margin-top:12px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-}
-.badge{
-    background:#1e293b;
-    color:#cbd5e1;
-    padding:6px 12px;
-    border-radius:20px;
-    font-size:13px;
-}
-.badge.online{
-    color:#22c55e;
-    border:1px solid #22c55e;
-}
-.chat{
-    flex:1;
-    overflow-y:auto;
-    padding:20px;
-}
-.message{
-    display:flex;
-    gap:12px;
-    margin-bottom:20px;
-}
-.avatar{
-    width:44px;
-    height:44px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    flex-shrink:0;
-}
-.clubai{ background:#10b981; }
-.user{ background:#2563eb; }
-.gemini{ background:#4285f4; }
-
-.bubble{
-    background:#1e293b;
-    padding:16px;
-    border-radius:16px;
-    max-width:850px;
-}
-.name{
-    font-weight:700;
-    margin-bottom:8px;
-}
-.text{
-    color:#e2e8f0;
-    line-height:1.7;
-}
-.input-area{
-    background:#111827;
-    border-top:1px solid #1f2937;
-    padding:16px;
-}
-.input-wrapper{
-    display:flex;
-    gap:10px;
-}
-input{
-    flex:1;
-    padding:14px;
-    border:none;
-    border-radius:12px;
-    background:#1e293b;
-    color:white;
-    outline:none;
-}
-button{
-    border:none;
-    background:#2563eb;
-    color:white;
-    padding:0 24px;
-    border-radius:12px;
-    cursor:pointer;
-}
-button:hover{
-    background:#1d4ed8;
-}
-.footer{
-    text-align:center;
-    color:#64748b;
-    font-size:12px;
-    margin-top:10px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Motorbike Station - Cho Thuê Xe Máy, Xe Điện & Tour Miền Trung</title>
+    <meta name="description" content="Hệ thống cho thuê xe máy, xe điện đổi pin, ô tô điện một chiều và tour du lịch chuyên nghiệp tại Đà Nẵng, Huế, Hội An.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-<div class="container">
-    <div class="header">
-        <h1>🤖 ClubAI Chat</h1>
-        <div class="status">
-            <span class="badge online">🟢 Gemini (API Live)</span>
-            <span class="badge">⚪ ChatGPT</span>
-            <span class="badge">⚪ Claude</span>
-            <span class="badge">⚪ Perplexity</span>
-            <span class="badge">⚪ Meta AI</span>
-        </div>
-    </div>
-
-    <div class="chat" id="chat">
-        <div class="message">
-            <div class="avatar clubai">C</div>
-            <div class="bubble">
-                <div class="name">ClubAI</div>
-                <div class="text">
-                    👋 Xin chào bằng hữu!<br><br>
-                    Hệ thống đã được tinh chỉnh lại để tương thích hoàn toàn với khóa API của bằng hữu.
-                </div>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>The Motorbike Station</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#services">Dịch vụ</a></li>
+                    <li><a href="#tours">Cung đường & Tour</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="header-hotline">
+                <a href="tel:0922771171"><i class="fa-solid fa-phone"></i> 0922 771 171</a>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div class="input-area">
-        <div class="input-wrapper">
-            <input id="messageInput" type="text" placeholder="Nhập tin nhắn...">
-            <button id="sendButton">Gửi</button>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-text">
+            <h2>Khám Phá Miền Trung Theo Cách Của Bạn</h2>
+            <p>Dịch vụ cho thuê xe máy, xe điện đổi pin & tour một chiều Huế - Đà Nẵng - Hội An uy tín hàng đầu.</p>
+            <a href="https://zalo.me/0922771171" target="_blank" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Đặt Xe Nhanh Zalo</a>
         </div>
-        <div class="footer">ClubAI Project © 2026</div>
-    </div>
-</div>
+    </section>
 
-<script>
-const input = document.getElementById("messageInput");
-const button = document.getElementById("sendButton");
-const chat = document.getElementById("chat");
-
-function scrollToBottom(){
-    chat.scrollTop = chat.scrollHeight;
-}
-
-function addMessage(sender, text, avatarClass, avatarIcon){
-    const message = document.createElement("div");
-    message.className = "message";
-    message.innerHTML = `
-        <div class="avatar ${avatarClass}">${avatarIcon}</div>
-        <div class="bubble">
-            <div class="name">${sender}</div>
-            <div class="text">${text}</div>
+    <!-- Services Section -->
+    <section id="services" class="container section">
+        <h2 class="section-title">Sản Phẩm & Dịch Vụ Nổi Bật</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="price">190.000 VND</div>
+                <h3>Xe Điện Đổi Pin Phú Quốc</h3>
+                <p>Thuê xe điện đổi pin không cần bằng lái, vi vu không lo hết điện.</p>
+            </div>
+            <div class="card">
+                <div class="price">550.000 VND</div>
+                <h3>Thuê Xe Một Chiều Huế - Hội An</h3>
+                <p>Thoải mái trải nghiệm cung đường di sản đẹp nhất miền Trung.</p>
+            </div>
+            <div class="card">
+                <div class="price">350.000 VND</div>
+                <h3>VinFast Minio Green 2026</h3>
+                <p>Mẫu xe điện mới nhất, hiện đại, thân thiện môi trường.</p>
+            </div>
+            <div class="card">
+                <div class="price">550.000 VND</div>
+                <h3>Honda ADV 160cc</h3>
+                <p>Xe tay ga địa hình mạnh mẽ cho các biker chính hiệu.</p>
+            </div>
         </div>
-    `;
-    chat.appendChild(message);
-    scrollToBottom();
-    return message;
-}
+    </section>
 
-async function callGeminiAPI(userPrompt) {
-    const apiKey = "AQ.Ab8RN6LG533TfrbBY-e2gVrU6_RhyAM5Un5JkJbhMrzpN-NmDg";
-    // Sử dụng model chuẩn và truyền key qua header Bearer hoặc tham số query tùy chỉnh
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+    <!-- Tours Section -->
+    <section id="tours" class="container section">
+        <h2 class="section-title">Cung Đường & Phượt Trải Nghiệm</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="price">1.250.000 VND</div>
+                <h3>Cung Đường Huế - Mỹ Sơn - Hội An</h3>
+                <p>Khám phá văn hóa và thiên nhiên hùng vĩ dọc miền Trung.</p>
+            </div>
+            <div class="card">
+                <div class="price">5.150.000 VND</div>
+                <h3>Cung Phượt 7 Ngày Nam - Trung - Tây</h3>
+                <p>Thử sức với cung đường phượt đỉnh cao cho người đam mê khám phá.</p>
+            </div>
+        </div>
+    </section>
 
-    const data = {
-        contents: [{
-            parts: [{ text: userPrompt }]
-        }]
-    };
+    <!-- Contact / Branches Section -->
+    <section id="contact" class="container section">
+        <h2 class="section-title">Hệ Thống Chi Nhánh</h2>
+        <div class="contact-box">
+            <p><i class="fa-solid fa-location-dot"></i> <strong>Đà Nẵng:</strong> K25/18 Ngũ Hành Sơn & K196/41 Trần Cao Vân</p>
+            <p><i class="fa-solid fa-location-dot"></i> <strong>Huế:</strong> 48/54 Ngô Quyền, P. Thuận Hoà</p>
+            <p><i class="fa-solid fa-location-dot"></i> <strong>Hội An:</strong> 271 Nguyễn Tất Thành</p>
+            <p><i class="fa-solid fa-phone"></i> <strong>Hotline/Zalo:</strong> 0922 771 171 - 0979 944 057</p>
+            <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> Themotorbikestation@gmail.com</p>
+        </div>
+    </section>
 
-    try {
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-
-        const result = await response.json();
-        
-        if (result.candidates && result.candidates[0].content) {
-            return result.candidates[0].content.parts[0].text;
-        } else if (result.error) {
-            return "Lỗi từ Google API: " + result.error.message;
-        } else {
-            return "Xin lỗi, phản hồi từ API không có nội dung.";
-        }
-    } catch (error) {
-        console.error("Lỗi kết nối:", error);
-        return "Xin lỗi, không thể kết nối tới máy chủ Gemini.";
-    }
-}
-
-async function sendMessage(){
-    const text = input.value.trim();
-    if(text === "") return;
-
-    addMessage("Bạn", text, "user", "U");
-    input.value = "";
-
-    const thinkingMessage = addMessage("Gemini 🟢 Online", "Đang suy nghĩ...", "gemini", "✨");
-
-    const aiResponse = await callGeminiAPI(text);
-
-    const reply = thinkingMessage.querySelector(".text");
-    reply.innerHTML = aiResponse.replace(/\n/g, '<br>');
-
-    addMessage(
-        "ClubAI Summary",
-        `✅ <strong>Phân tích nhanh:</strong><br><br>` +
-        `- <strong>Gemini:</strong> Đã xử lý yêu cầu thành công.<br>` +
-        `- <strong>Trạng thái:</strong> Kết nối thông suốt.<br><br>` +
-        `🎯 <em>Một câu hỏi, nhiều góc nhìn.</em>`,
-        "clubai",
-        "C"
-    );
-
-    scrollToBottom();
-}
-
-button.addEventListener("click", sendMessage);
-
-input.addEventListener("keydown", function(e){
-    if(e.key === "Enter"){
-        sendMessage();
-    }
-});
-
-scrollToBottom();
-</script>
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>Copyright © 2016 - 2026 The Motorbike Station. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
