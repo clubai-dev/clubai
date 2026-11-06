@@ -400,9 +400,53 @@ button:hover{
 
 <script>
 
-const input = document.getElementById("messageInput");
-const button = document.getElementById("sendButton");
-const chat = document.getElementById("chat");
+function sendMessage(){
+
+    const text = input.value.trim();
+
+    if(text === "")
+        return;
+
+    addMessage(
+        "Bạn",
+        text,
+        "user",
+        "U"
+    );
+
+    input.value = "";
+
+    const thinkingMessage = addMessage(
+        "Gemini 🟢 Online",
+        "Đang suy nghĩ...",
+        "gemini",
+        "✨"
+    );
+
+    setTimeout(() => {
+
+        const reply = thinkingMessage.querySelector(".text");
+
+        const geminiResponseText = "Mình đã nhận được tin nhắn của bạn.<br><br>Bước tiếp theo sẽ là kết nối Gemini API thật để ClubAI có thể trả lời tự động.";
+        
+        reply.innerHTML = geminiResponseText;
+
+        // Tự động tạo khung ClubAI Summary tổng hợp ngay sau khi có phản hồi
+        addMessage(
+            "ClubAI Summary",
+            `✅ <strong>Phân tích nhanh:</strong><br><br>` +
+            `- <strong>Gemini:</strong> Đã phản hồi thành công câu hỏi: "${text}".<br>` +
+            `- <strong>Trạng thái hệ thống:</strong> Các mô hình khác (ChatGPT, Claude, Perplexity, Meta AI) sẽ sớm được tích hợp để tạo ra đa góc nhìn đầy đủ nhất.<br><br>` +
+            `🎯 <em>Một câu hỏi, nhiều góc nhìn.</em>`,
+            "clubai",
+            "C"
+        );
+
+        scrollToBottom();
+
+    }, 1200);
+
+}
 
 function scrollToBottom(){
     chat.scrollTop = chat.scrollHeight;
