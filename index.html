@@ -1,312 +1,328 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cho thue oto dien/Cho thue xe may dien/Motorbike For Rent/Motorbike Tour/50cc 오토바이 대여 da nang/Oneway rental/One way motorbike rental/Electric scooter for rent/Electric motorbike for rent/50cc for rent/oneway rental from Ho</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Motorbike Station – Thuê xe máy & Tour miền Trung</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap">
+<style>
+:root{--bg:#fbf8f3;--surf:#fff;--tx:#1b1a17;--mut:#6d675d;--ac:#e8521a;--ac2:#0f766e;--bd:#ece5d8;--sh:0 8px 30px rgba(40,25,5,.08);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14120f;--surf:#1e1b17;--tx:#f4efe6;--mut:#a39b8d;--bd:#322d26;--sh:0 8px 30px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14120f;--surf:#1e1b17;--tx:#f4efe6;--mut:#a39b8d;--bd:#322d26;--sh:0 8px 30px rgba(0,0,0,.4);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-weight:800;font-size:18px;display:flex;align-items:center;gap:8px}
+.logo i{font-style:normal;background:var(--ac);color:#fff;border-radius:10px;padding:2px 8px}
+nav{display:flex;gap:22px;font-size:14px;font-weight:500;color:var(--mut)}
+nav a:hover{color:var(--ac)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ac);color:#fff;font-weight:700;padding:12px 22px;border-radius:999px;border:0;cursor:pointer;font:inherit;font-weight:700;transition:transform .15s,box-shadow .15s;box-shadow:0 6px 18px rgba(232,82,26,.3)}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--tx);border:1.5px solid var(--bd);box-shadow:none}
+.hero{padding:70px 0 50px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.tag{display:inline-block;background:color-mix(in srgb,var(--ac2) 14%,transparent);color:var(--ac2);font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px}
+h1{font-size:clamp(34px,5.4vw,60px);line-height:1.08;margin:16px 0;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--ac)}
+.hero p{color:var(--mut);font-size:17px;max-width:520px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}
+.stats{display:flex;gap:28px;flex-wrap:wrap}
+.stats b{display:block;font-size:26px}
+.stats span{color:var(--mut);font-size:13px}
+.art{aspect-ratio:1/1.02;border-radius:32px;background:linear-gradient(150deg,#ffb26b,#e8521a 55%,#7c2d12);position:relative;overflow:hidden;box-shadow:var(--sh);display:grid;place-items:center;font-size:clamp(110px,18vw,190px)}
+.art::before{content:"";position:absolute;width:140%;height:60%;bottom:-25%;left:-20%;background:rgba(255,255,255,.14);border-radius:50%}
+.art small{position:absolute;left:18px;bottom:18px;background:rgba(0,0,0,.35);color:#fff;font-size:13px;padding:8px 14px;border-radius:999px;backdrop-filter:blur(6px)}
+section{padding:54px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+h2{font-size:clamp(26px,3.6vw,38px);margin:0;letter-spacing:-.01em}
+.head p{margin:6px 0 0;color:var(--mut)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.tab{white-space:nowrap;border:1.5px solid var(--bd);background:var(--surf);color:var(--tx);font:inherit;font-size:14px;font-weight:600;padding:9px 18px;border-radius:999px;cursor:pointer}
+.tab.on{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.card{background:var(--surf);border:1px solid var(--bd);border-radius:24px;overflow:hidden;box-shadow:var(--sh);transition:transform .2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-5px)}
+.thumb{height:150px;display:grid;place-items:center;font-size:62px}
+.body{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.meta{display:flex;gap:6px;flex-wrap:wrap}
+.meta span{font-size:12px;font-weight:600;background:var(--bg);border:1px solid var(--bd);padding:3px 10px;border-radius:999px;color:var(--mut)}
+.card h3{font-size:16px;margin:0;line-height:1.35}
+.card p{margin:0;color:var(--mut);font-size:13.5px;flex:1}
+.price{display:flex;justify-content:space-between;align-items:center;margin-top:6px}
+.price b{font-size:19px;color:var(--ac)}
+.price b small{font-size:12px;color:var(--mut);font-weight:500}
+.price a{font-size:13px;font-weight:700;background:var(--tx);color:var(--bg);padding:8px 16px;border-radius:999px}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.why div{background:var(--surf);border:1px solid var(--bd);border-radius:22px;padding:24px}
+.why i{font-style:normal;font-size:30px}
+.why h3{margin:10px 0 4px;font-size:17px}
+.why p{margin:0;color:var(--mut);font-size:14px}
+.locs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.locs div{border-left:4px solid var(--ac2);background:var(--surf);padding:16px 18px;border-radius:0 18px 18px 0;border-top:1px solid var(--bd);border-right:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.locs b{display:block}
+.locs span{color:var(--mut);font-size:14px}
+.band{background:linear-gradient(120deg,#0f766e,#064e3b);color:#fff;border-radius:32px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.band h2{max-width:520px}
+.band .btn{background:#fff;color:#064e3b;box-shadow:none}
+footer{border-top:1px solid var(--bd);padding:34px 0;color:var(--mut);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));background:#0068ff;color:#fff;font-weight:700;padding:13px 20px;border-radius:999px;box-shadow:0 8px 24px rgba(0,104,255,.4);z-index:25}
+
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.tools input,.tools select,.f input,.f select{font:inherit;font-size:14px;background:var(--surf);color:var(--tx);border:1.5px solid var(--bd);border-radius:14px;padding:10px 14px;min-width:0}
+.tools input{flex:1;min-width:180px}
+.ib{border:1.5px solid var(--bd);background:var(--surf);color:var(--tx);border-radius:999px;padding:8px 12px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.nav .r{display:flex;gap:8px;align-items:center}
+.card{cursor:pointer}
+.empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:40px}
+dialog{border:0;border-radius:28px;padding:0;max-width:min(520px,94vw);width:100%;background:var(--surf);color:var(--tx);box-shadow:0 30px 80px rgba(0,0,0,.4)}
+dialog::backdrop{background:rgba(10,8,5,.55);backdrop-filter:blur(4px)}
+.m .thumb{height:130px}
+.m .in{padding:22px}
+.m h3{margin:0 0 4px;font-size:20px}
+.f{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.f label{font-size:12px;font-weight:600;color:var(--mut);display:flex;flex-direction:column;gap:4px}
+.f .w{grid-column:1/-1}
+.tot{display:flex;justify-content:space-between;align-items:center;background:var(--bg);border-radius:16px;padding:14px 18px;margin-bottom:14px}
+.tot b{font-size:22px;color:var(--ac)}
+.send{display:flex;gap:8px;flex-wrap:wrap}
+.send .btn{flex:1;justify-content:center;padding:12px 14px;font-size:14px}
+.x{position:absolute;right:14px;top:14px;background:rgba(0,0,0,.35);color:#fff;border:0;border-radius:50%;width:34px;height:34px;cursor:pointer;font-size:16px}
+.faq details{background:var(--surf);border:1px solid var(--bd);border-radius:18px;padding:16px 20px;margin-bottom:10px}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{color:var(--mut);margin:10px 0 0;font-size:14.5px}
+.note{font-size:12px;color:var(--mut);margin:8px 0 0}
+[hidden]{display:none!important}
+.back{display:inline-block;margin:26px 0 14px;font-weight:700;color:var(--ac)}
+.dg{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:start;padding-bottom:50px}
+.dh{height:260px;border-radius:28px;display:grid;place-items:center;font-size:110px}
+.dt{font-size:clamp(26px,4vw,38px);margin:14px 0 6px}
+.dg h3{margin:30px 0 12px;font-size:19px}
+.sp{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:0}
+.sp div{background:var(--surf);border:1px solid var(--bd);border-radius:16px;padding:12px 16px}
+.sp dt{font-size:12px;color:var(--mut)}.sp dd{margin:2px 0 0;font-weight:700;font-size:14px}
+.bk{position:sticky;top:calc(env(safe-area-inset-top,0px) + 80px);background:var(--surf);border:1px solid var(--bd);border-radius:26px;padding:22px;box-shadow:var(--sh)}
+.bk .price b{font-size:26px}
+.cal{background:var(--surf);border:1px solid var(--bd);border-radius:22px;padding:16px}
+.ch{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:700}
+.cg{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.cg small{color:var(--mut);font-weight:600;font-size:12px}
+.cg button{aspect-ratio:1;border:0;border-radius:12px;background:transparent;color:var(--tx);font:inherit;font-size:14px;cursor:pointer}
+.cg button:hover:not(:disabled){background:var(--bg)}
+.cg button:disabled{color:var(--mut);opacity:.4;cursor:not-allowed}
+.cg button.bk2{text-decoration:line-through;background:color-mix(in srgb,var(--ac) 14%,transparent);opacity:.8}
+.cg button.in{background:color-mix(in srgb,var(--ac2) 22%,transparent)}
+.cg button.on{background:var(--ac2);color:#fff;font-weight:700}
+.rv{background:var(--surf);border:1px solid var(--bd);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.rv .st{color:#f59e0b;letter-spacing:2px}.rv p{margin:0;color:var(--mut);font-size:14px}
+.rv .sm{font-size:11px;background:var(--bg);border:1px dashed var(--mut);color:var(--mut);border-radius:999px;padding:1px 8px;align-self:flex-start}
+.sel{background:var(--bg);border-radius:14px;padding:10px 14px;margin:12px 0;font-size:14px;font-weight:600}
+.two{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:900px){.dg{grid-template-columns:1fr}.bk{position:static}}
+@media(max-width:820px){.hero{grid-template-columns:1fr;padding-top:40px}nav{display:none}.band{padding:30px}}
+</style>
 </head>
 <body>
+<header><div class="wrap nav">
+<a class="logo" href="#"><i>TMS</i> The Motorbike Station</a>
+<nav><a href="#xe">Thuê xe</a><a href="#tour">Tour & Easy Rider</a><a href="#vi-sao">Vì sao chọn chúng tôi</a><a href="#lien-he">Liên hệ</a></nav>
+<div class="r"><button class="ib" id="lg">EN</button><button class="ib" id="th" aria-label="Theme">🌓</button><a class="btn" href="#xe" data-i="book">Đặt xe ngay</a></div>
+</div></header>
 
-    <!-- Header / Navbar -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <h1>The Motorbike Station</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="https://www.themotorbikestation.com/">Trang chủ</a></li>
-                    <li><a href="https://www.themotorbikestation.com/news.html">Tin tức</a></li>
-                    <li><a href="https://www.themotorbikestation.com/cho-thue-xe-may-mot-chieu">Cho thuê xe máy một chiều</a></li>
-                    <li><a href="https://www.themotorbikestation.com/cho-thue-oto-dien-mot-chieu">Cho Thuê Oto Điện Một Chiều</a></li>
-                    <li><a href="https://www.themotorbikestation.com/cho-thue-xe-dien-doi-pi">Cho Thuê Xe Điện Đổi Pin</a></li>
-                    <li><a href="https://www.themotorbikestation.com/-cho-thue-xe-may">Cho thuê xe máy</a></li>
-                    <li><a href="url?id=6">Foods Tour & EasyRider</a></li>
-                    <li><a href="https://www.themotorbikestation.com/-cho-thue-xe-may5">Liên hệ</a></li>
-                </ul>
-            </nav>
-            <div class="header-hotline">
-                <a href="https://zalo.me/0922771171"><i class="fa-solid fa-phone"></i> 0922 771 171</a>
-            </div>
-        </div>
-    </header>
+<main><div id="detail" class="wrap" hidden></div><div id="home">
+<div class="wrap hero">
+<div>
+<span class="tag">Đà Nẵng · Hội An · Huế · Phú Quốc</span>
+<h1>Thuê xe, <em>khám phá miền Trung</em> theo cách của bạn</h1>
+<p>Xe máy, xe điện không cần bằng lái, ô tô điện thuê một chiều và các tour ẩm thực – mọi hành trình đều giao nhận tận nơi.</p>
+<div class="cta"><a class="btn" href="#xe">Xem bảng giá</a><a class="btn ghost" href="tel:+84922771171">Hotline 0922 771 171</a></div>
+<div class="stats"><div><b>4</b><span>Chi nhánh</span></div><div><b>12</b><span>Thứ tiếng hỗ trợ</span></div><div><b>150K</b><span>Giá từ / ngày</span></div></div>
+</div>
+<div class="art">🛵<small>Thuê một chiều Huế → Hội An</small></div>
+</div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-text">
-            <h2>KHÁM PHÁ MIỀN TRUNG VIỆT NAM THEO CÁCH CỦA BẠN</h2>
-            <p>Cho thue oto dien / Cho thue xe may dien / Motorbike For Rent / Motorbike Tour</p>
-        </div>
-    </section>
+<section id="xe"><div class="wrap">
+<div class="head"><div><h2>Chọn xe phù hợp với bạn</h2><p>Giá thuê theo ngày, đã bao gồm mũ bảo hiểm.</p></div><div class="tabs" id="tabs"></div></div>
+<div class="tools"><input id="q" type="search" placeholder="Tìm xe, tuyến đường…"><select id="so"><option value="0">Mặc định</option><option value="1">Giá tăng dần</option><option value="2">Giá giảm dần</option></select></div>
+<div class="grid" id="grid"></div>
+</div></section>
 
-    <!-- Sản Phẩm Mới -->
-    <section class="container section">
-        <h2 class="section-title">SẢN PHẨM MỚI</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="price">190.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Xe không bằng lái</span>
-                    <h3>Thuê xe máy điện đổi pin tại Phú Quốc</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">550.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Cho thuê xe máy một chiều Huế - Hội an</span>
-                    <h3>Cung đường di sản Huế - Hội an</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">18.000.000 VND</div>
-                <div class="card-body">
-                    <span class="category">THE DRAGON OF VIETNAM</span>
-                    <h3>ĐẠI HÀNH TRÌNH XUYÊN VIỆT BẰNG XE ĐIỆN</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">350.000 VND</div>
-                <div class="card-body">
-                    <span class="category">VINFAST MINIO GREEN 2026</span>
-                    <h3>KHÁM PHÁ MIỀN TRUNG VIỆT NAM THEO CÁCH CỦA BẠN</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">599.000 VND</div>
-                <div class="card-body">
-                    <span class="category">HÀNH TRÌNH SỐ 0 - THE ORIGIN OF THE DRAGON</span>
-                    <h3>ĐÀ NẴNG → HỘI AN → HUẾ → ĐÔNG HÀ → KHE SANH → PHONG NHA – KẺ BÀNG → ĐỒNG HỚI</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">300.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Dịch Vụ Cho Thuê Xe Đạp Cargo</span>
-                    <h3>Dịch Vụ Cho Thuê Xe Đạp Cargo – Trải Nghiệm Du Lịch Chậm Cùng The Motorbike Station</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">200.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Cho thuê xe máy điện 03 bánh</span>
-                    <h3>Cho Thuê Xe Máy Điện 3 Bánh – An Toàn Cho Người Già & Người Khuyết Tật</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">190.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Cho thuê xe máy điện đổi pin</span>
-                    <h3>Cho thuê xe máy điện đi Ba na hill - Mỹ Sơn - Hải Vân - Lăng cô - Bạch mã</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">170.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Xe điện đổi pin</span>
-                    <h3>Xe điện đổi pin EvgoD</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">150.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Cho thuê xe máy điện không cần bằng lái</span>
-                    <h3>Cho thuê xe máy điện - Hội An</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">150.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Cho thuê xe máy điện không cần bằng lái</span>
-                    <h3>Cho thuê xe máy điện - Huế</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">150.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Cho thuê xe máy điện không cần bằng lái</span>
-                    <h3>Cho thuê xe máy điện - Đà Nẵng</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">1.250.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Cho thuê xe máy một chiều Huế - Hội an</span>
-                    <h3>Cung đường di sản đẹp nhất Huế - Mỹ Sơn - Hội an</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">2.950.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Thuê xe máy 1 chiều Hội an - Phong nha kẻ bàng</span>
-                    <h3>Cung đường di sản đẹp nhất Miền Trung</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">5.150.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Thử sức với cung nhẹ nhẹ mà mê ly này nhé các bạn</span>
-                    <h3>Cung phượt 07 ngày kết nối Nam - Tây - Trung</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">15.500.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Chuyến đi nhất định phải một lần trải nghiệm</span>
-                    <h3>45 ngày chinh phục bốn cực Đông - Tây - Nam - Bắc của Việt Nam bằng xe máy</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">9.500.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Cung phượt đẹp mê ly</span>
-                    <h3>Phượt xe máy 12 ngày cung Đông - Tây Bắc</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">550.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Xe tay ga chạy xăng - Honda ADV 160cc</span>
-                    <h3>Honda ADV 160cc</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">750.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Xe côn tay địa hình - Yamaha WR155cc</span>
-                    <h3>Yamaha WR155R</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="price">1.350.000 VND</div>
-                <div class="card-body">
-                    <span class="category">Scooter cao cấp</span>
-                    <h3>Yamaha XMAX 300cc</h3>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="vi-sao"><div class="wrap">
+<div class="head"><div><h2>Vì sao chọn chúng tôi</h2></div></div>
+<div class="why">
+<div><i>🔑</i><h3>Không cần bằng lái</h3><p>Dòng xe điện đổi pin phù hợp du khách và người mới.</p></div>
+<div><i>🗺️</i><h3>Thuê một chiều</h3><p>Nhận xe ở Huế, trả xe ở Hội An – không phải quay đầu.</p></div>
+<div><i>🔋</i><h3>Đổi pin tiện lợi</h3><p>Đi xa Bà Nà, Hải Vân, Bạch Mã không lo hết điện.</p></div>
+<div><i>💬</i><h3>Hỗ trợ 24/7</h3><p>Zalo, WhatsApp, WeChat, Kakao, Line – trả lời nhanh.</p></div>
+</div></div></section>
 
-    <!-- Danh mục dịch vụ chi tiết -->
-    <section class="container section">
-        <div class="category-block" id="oneway">
-            <div class="block-header">
-                <h3>CHO THUÊ XE MÁY MỘT CHIỀU</h3>
-                <a href="https://www.themotorbikestation.com/one-way-e-motorbike-rental" class="view-all">Xem tất cả</a>
-            </div>
-            <ul class="detail-list">
-                <li><span>Cung đường di sản Huế - Hội an</span> <span class="meta">1 ngày | 1 chiều | Cho thuê xe máy một chiều Huế - Hội an</span> <span class="price-tag">550.000 VND</span></li>
-                <li><span>Cung đường di sản đẹp nhất Huế - Mỹ Sơn - Hội an</span> <span class="meta">02 ngày | 1 chiều | Cho thuê xe máy một chiều Huế - Hội an</span> <span class="price-tag">1.250.000 VND</span></li>
-                <li><span>Cung đường di sản đẹp nhất Miền Trung</span> <span class="meta">03 ngày | Một chiều | Thuê xe máy 1 chiều Hội an - Phong nha kẻ bàng</span> <span class="price-tag">2.950.000 VND</span></li>
-                <li><span>Cung phượt 07 ngày kết nối Nam - Tây - Trung</span> <span class="meta">07 ngày | Một chiều | Thử sức với cung nhẹ nhẹ mà mê ly này nhé các bạn</span> <span class="price-tag">5.150.000 VND</span></li>
-                <li><span>45 ngày chinh phục bốn cực Đông - Tây - Nam - Bắc của Việt Nam bằng xe máy</span> <span class="meta">45 ngày | Một chiều | Chuyến đi nhất định phải một lần trải nghiệm</span> <span class="price-tag">15.500.000 VND</span></li>
-                <li><span>Phượt xe máy 12 ngày cung Đông - Tây Bắc</span> <span class="meta">12 ngày | Một chiều | Cung phượt đẹp mê ly</span> <span class="price-tag">9.500.000 VND</span></li>
-            </ul>
-        </div>
+<section><div class="wrap"><div class="band">
+<div><h2>Sẵn sàng cho chuyến đi tiếp theo?</h2><p>Nhắn Zalo hoặc WhatsApp để giữ xe và nhận báo giá trong vài phút.</p></div>
+<a class="btn" href="https://api.whatsapp.com/send/?phone=0922771171">Nhắn WhatsApp</a>
+</div></div></section>
 
-        <div class="category-block" id="otodien">
-            <div class="block-header">
-                <h3>CHO THUÊ OTO ĐIỆN MỘT CHIỀU</h3>
-                <a href="https://www.themotorbikestation.com/one-way-electric-car-rental-" class="view-all">Xem tất cả</a>
-            </div>
-            <ul class="detail-list">
-                <li><span>ĐẠI HÀNH TRÌNH XUYÊN VIỆT BẰNG XE ĐIỆN</span> <span class="meta">30 ngày | Minio Green - 4C | THE DRAGON OF VIETNAM</span> <span class="price-tag">18.000.000 VND</span></li>
-                <li><span>KHÁM PHÁ MIỀN TRUNG VIỆT NAM THEO CÁCH CỦA BẠN</span> <span class="meta">1 ngày | Minio Green - 4C | VINFAST MINIO GREEN 2026</span> <span class="price-tag">350.000 VND</span></li>
-                <li><span>HÀNH TRÌNH SỐ 0 - THE ORIGIN OF THE DRAGON</span> <span class="meta">5 ngày | Minio Green - 4C</span> <span class="price-tag">599.000 VND</span></li>
-            </ul>
-        </div>
+<section id="danh-gia"><div class="wrap"><div class="head"><div><h2>Khách nói gì về chúng tôi</h2><p id="avg"></p></div><div class="two"><a class="btn ghost" id="wr" href="#">Viết đánh giá</a><a class="btn ghost" href="https://www.tripadvisor.com.vn/" target="_blank" rel="noopener">TripAdvisor</a></div></div><div class="grid" id="revs"></div></div></section>
+<section id="faq"><div class="wrap"><div class="head"><h2 data-i="faqt">Câu hỏi thường gặp</h2></div><div class="faq">
+<details><summary data-i="q1">Thuê xe điện có cần bằng lái không?</summary><p data-i="a1">Các dòng xe điện đổi pin được đánh dấu "không cần bằng lái". Xe xăng và xe phân khối lớn cần bằng lái hợp lệ.</p></details>
+<details><summary data-i="q2">Thuê một chiều hoạt động thế nào?</summary><p data-i="a2">Bạn nhận xe ở điểm này và trả ở điểm khác, ví dụ nhận ở Huế và trả ở Hội An. Hãy liên hệ để được xác nhận tuyến.</p></details>
+<details><summary data-i="q3">Giá đã gồm những gì?</summary><p data-i="a3">Giá hiển thị là giá thuê cơ bản theo ngày hoặc theo gói. Vui lòng xác nhận chi tiết (mũ bảo hiểm, đặt cọc, phụ phí) khi đặt xe.</p></details>
+</div></div></section>
+<section id="lien-he"><div class="wrap">
+<div class="head"><div><h2>Chi nhánh & liên hệ</h2></div></div>
+<div class="locs">
+<div><b>Đà Nẵng 1</b><span>K25/18 Ngũ Hành Sơn</span></div>
+<div><b>Đà Nẵng 2</b><span>K196/41 Trần Cao Vân</span></div>
+<div><b>Huế</b><span>48/54 Ngô Quyền</span></div>
+<div><b>Hội An</b><span>271 Nguyễn Tất Thành</span></div>
+</div></div></section>
+</div></main>
 
-        <div class="category-block" id="xedien">
-            <div class="block-header">
-                <h3>CHO THUÊ XE ĐIỆN ĐỔI PIN</h3>
-                <a href="https://www.themotorbikestation.com/battery-swap-electric-motorbike-rental" class="view-all">Xem tất cả</a>
-            </div>
-            <ul class="detail-list">
-                <li><span>Thuê xe máy điện đổi pin tại Phú Quốc</span> <span class="meta">1 ngày | Vinfast | Xe không bằng lái</span> <span class="price-tag">190.000 VND</span></li>
-                <li><span>Cho Thuê Xe Máy Điện 3 Bánh – An Toàn Cho Người Già & Người Khuyết Tật</span> <span class="meta">1 ngày | 03 bánh | Cho thuê xe máy điện 03 bánh</span> <span class="price-tag">200.000 VND</span></li>
-                <li><span>Cho thuê xe máy điện đi Ba na hill - Mỹ Sơn - Hải Vân - Lăng cô - Bạch mã</span> <span class="meta">1 | Xe điện | Cho thuê xe máy điện đổi pin</span> <span class="price-tag">190.000 VND</span></li>
-                <li><span>Xe điện đổi pin EvgoD</span> <span class="meta">1 ngày | Xe điện | Xe điện đổi pin không cần bằng lái tại Huế - Đà nẵng - Hội an</span> <span class="price-tag">170.000 VND</span></li>
-                <li><span>Cho thuê xe máy điện - Hội An</span> <span class="meta">1 | 1 | Cho thuê xe máy điện không cần bằng lái</span> <span class="price-tag">150.000 VND</span></li>
-                <li><span>Cho thuê xe máy điện - Huế</span> <span class="meta">1 | 1 | Cho thuê xe máy điện không cần bằng lái</span> <span class="price-tag">150.000 VND</span></li>
-            </ul>
-        </div>
+<footer><div class="wrap"><span>© The Motorbike Station · Themotorbikestation@gmail.com</span><span>Hotline: (+84) 922 771 171 · (+84) 979 944 057</span></div></footer>
+<a class="fab" href="https://zalo.me/0922771171">💬 Chat Zalo</a>
 
-        <div class="category-block" id="xemay">
-            <div class="block-header">
-                <h3>CHO THUÊ XE MÁY</h3>
-                <a href="https://www.themotorbikestation.com/motorcycle-for-rent" class="view-all">Xem tất cả</a>
-            </div>
-            <ul class="detail-list">
-                <li><span>Dịch Vụ Cho Thuê Xe Đạp Cargo</span> <span class="meta">1 ngày | Xe đạp Cargo | Dịch Vụ Cho Thuê Xe Đạp Cargo – Trải Nghiệm Du Lịch Chậm Cùng The Motorbike Station</span> <span class="price-tag">300.000 VND</span></li>
-                <li><span>Honda ADV 160cc</span> <span class="meta">1 ngày | Xe tay ga | Xe tay ga chạy xăng - Honda ADV 160cc</span> <span class="price-tag">550.000 VND</span></li>
-                <li><span>Yamaha WR155R</span> <span class="meta">1 Ngày | Xe máy địa hình | Xe côn tay địa hình - Yamaha WR155cc</span> <span class="price-tag">750.000 VND</span></li>
-                <li><span>Yamaha XMAX 300cc</span> <span class="meta">1 ngày | Xe tự động | Scooter cao cấp</span> <span class="price-tag">1.350.000 VND</span></li>
-                <li><span>Royal Enfield Classic 350cc</span> <span class="meta">1 ngày | Classic | Cổ điển vượt thời gian</span> <span class="price-tag">1.550.000 VND</span></li>
-                <li><span>BMW R 1250 GS Adventure</span> <span class="meta">1 ngày | Phân khối lớn | Vua xe phượt đường dài</span> <span class="price-tag">7.500.000 VND</span></li>
-            </ul>
-        </div>
-
-        <div class="category-block" id="foodtour">
-            <div class="block-header">
-                <h3>FOODS TOUR & EASYRIDER</h3>
-                <a href="https://www.themotorbikestation.com/foods-tour-easyrider" class="view-all">Xem tất cả</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer & Tripadvisor Section -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="newsletter-box">
-                <h3>___Đăng ký nhận tin___</h3>
-                <div class="newsletter-form">
-                    <button class="btn-mail">GỬI MAIL</button>
-                </div>
-            </div>
-
-            <div class="contact-box">
-                <h3 class="footer-title">TTS COMPANY</h3>
-                <p>Địa chỉ: <strong>No.1: K25/18 Ngũ Hành Sơn street, Đà Nẵng city - No.2: K196/41 Trần Cao Vân street, Da nang city - No.3: 48/54 Ngô Quyền, Huế - No.4: 271 Nguyễn Tất Thành, Hội An</strong></p>
-                <p>VPLV: <strong>150 Duy Tân, Đà Nẵng, Việt Nam</strong></p>
-                <p>VPĐH: <strong>Xuân Lộc, Đồng Nai, Việt Nam</strong></p>
-                <p>Điện thoại: <strong>(+84) 979 944 057</strong> - Hotline: <strong>(+84) 922 771 171</strong> Whatsapp/Zalo/Wechat/Twitter/Viber/Kakaotalk - Fax:</p>
-                <p>Email: <strong>Themotorbikestation@gmail.com</strong></p>
-            </div>
-
-            <div class="footer-nav">
-                <ul>
-                    <li><a href="https://www.themotorbikestation.com/">Trang chủ</a></li>
-                    <li><a href="https://www.themotorbikestation.com/news.html">Tin tức</a></li>
-                    <li><a href="https://www.themotorbikestation.com/cho-thue-xe-may-mot-chieu">Cho thuê xe máy một chiều</a></li>
-                    <li><a href="url?id=3">Cho Thuê Oto Điện Một Chiều</a></li>
-                    <li><a href="url?id=4">Cho Thuê Xe Điện Đổi Pin</a></li>
-                    <li><a href="https://www.themotorbikestation.com/-cho-thue-xe-may">Cho thuê xe máy</a></li>
-                    <li><a href="https://www.themotorbikestation.com/foods-tour-easyrider">Foods Tour & EasyRider</a></li>
-                    <li><a href="https://www.themotorbikestation.com/contact">Liên hệ</a></li>
-                </ul>
-            </div>
-
-            <div class="tripadvisor-widget">
-                <p><a href="url?id=63" target="_blank"><i class="fa-brands fa-tripadvisor"></i> Tripadvisor</a></p>
-                <p><a href="https://www.tripadvisor.com.vn/Attraction_Review-g298085-d12598185-Reviews-The_Motorbike_Station-Da_Nang.html" class="ta-review-link">Đánh giá The Motorbike Station</a></p>
-                <div class="ta-rating">
-                    <span>cdsWRLForm4535</span>
-                    <div class="stars">★★★★★ <span>★★★★★</span></div>
-                    <p class="ta-instruction">(Nhấp để xếp hạng)</p>
-                </div>
-                <div class="ta-form">
-                    <p>Viết tiêu đề cho đánh giá của bạn</p>
-                    <p>Mô tả lần lưu trú của bạn bằng một câu hoặc ít hơn.</p>
-                    <button class="btn-continue">Tiếp tục</button>
-                </div>
-            </div>
-
-            <div class="footer-copy">
-                <p>Copyright © 2016 The motorbike station. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
+<script>
+var C={"Xe điện":["#d1fae5","#065f46"],"Ô tô điện":["#dbeafe","#1e40af"],"Xe máy":["#ffedd5","#9a3412"],"Một chiều":["#fef3c7","#92400e"],"Tour":["#fce7f3","#9d174d"]};
+var P=[
+["Xe điện","🔋","Xe điện đổi pin EvgoD","Không cần bằng lái · Huế, Đà Nẵng, Hội An","1 ngày",170000],
+["Xe điện","🛵","Xe máy điện Hội An","Không cần bằng lái","1 ngày",150000],
+["Xe điện","🛵","Xe máy điện Đà Nẵng","Không cần bằng lái","1 ngày",150000],
+["Xe điện","⚡","Xe điện đổi pin Phú Quốc","VinFast, không cần bằng lái","1 ngày",190000],
+["Xe điện","🛺","Xe máy điện 3 bánh","An toàn cho người già & người khuyết tật","1 ngày",200000],
+["Ô tô điện","🚗","VinFast Minio Green 2026","Khám phá miền Trung theo cách của bạn","1 ngày",350000],
+["Ô tô điện","🚙","Hành trình số 0","Đà Nẵng → Hội An → Huế → Phong Nha → Đồng Hới","5 ngày",599000],
+["Ô tô điện","🐉","Đại hành trình xuyên Việt","The Dragon of Vietnam","30 ngày",18000000],
+["Xe máy","🏍️","Honda ADV 160cc","Tay ga chạy xăng","1 ngày",550000],
+["Xe máy","🏁","Yamaha WR155R","Côn tay địa hình","1 ngày",750000],
+["Xe máy","🛵","Yamaha XMAX 300cc","Scooter cao cấp","1 ngày",1350000],
+["Xe máy","🏍️","Royal Enfield Classic 350","Cổ điển vượt thời gian","1 ngày",1550000],
+["Xe máy","🦅","BMW R 1250 GS Adventure","Vua xe phượt đường dài","1 ngày",7500000],
+["Một chiều","🌄","Di sản Huế – Hội An","Một chiều qua đèo Hải Vân","1 ngày",550000],
+["Một chiều","🏯","Huế – Mỹ Sơn – Hội An","Cung di sản đẹp nhất","2 ngày",1250000],
+["Một chiều","🏞️","Hội An – Phong Nha Kẻ Bàng","Cung di sản miền Trung","3 ngày",2950000],
+["Một chiều","🌿","Phượt 7 ngày Nam – Tây – Trung","Nhẹ nhàng mà mê ly","7 ngày",5150000],
+["Tour","🍜","Tour ẩm thực Đà Nẵng","Xe điện & đặc sản địa phương","4 giờ",737000],
+["Tour","🍲","Tour ẩm thực Huế","Xe điện & ẩm thực cung đình","4 giờ",737000],
+["Tour","🥢","Tour ẩm thực Hội An","Xe điện & phố cổ về đêm","4 giờ",737000]
+];
+var D={"Thuê xe":"Rent a bike","Tour & Easy Rider":"Tours & Easy Rider","Vì sao chọn chúng tôi":"Why choose us","Liên hệ":"Contact","Đặt xe ngay":"Book now","Xem bảng giá":"See prices","Chọn xe phù hợp với bạn":"Pick your ride","Giá thuê theo ngày, đã bao gồm mũ bảo hiểm.":"Daily rental price. Helmets included.","Tất cả":"All","Xe điện":"Electric bikes","Ô tô điện":"Electric cars","Xe máy":"Motorbikes","Một chiều":"One-way","Tour":"Tours","Không cần bằng lái":"No licence needed","Thuê một chiều":"One-way rental","Đổi pin tiện lợi":"Easy battery swap","Hỗ trợ 24/7":"24/7 support","Sẵn sàng cho chuyến đi tiếp theo?":"Ready for your next trip?","Nhắn WhatsApp":"Message on WhatsApp","Chi nhánh & liên hệ":"Branches & contact","Câu hỏi thường gặp":"FAQ","Họ tên":"Full name","Số điện thoại":"Phone","Ngày nhận xe":"Pick-up date","Số ngày":"Days","Điểm nhận":"Pick-up city","Tạm tính":"Estimate","Chi nhánh":"Branches","Thứ tiếng hỗ trợ":"Languages","Giá từ / ngày":"From / day",
+"Thuê xe, khám phá miền Trung theo cách của bạn":"Rent a ride, explore Central Vietnam your way",
+"Xe máy, xe điện không cần bằng lái, ô tô điện thuê một chiều và các tour ẩm thực – mọi hành trình đều giao nhận tận nơi.":"Motorbikes, no-licence e-bikes, one-way electric cars and food tours, with delivery and pick-up included.",
+"Các dòng xe điện đổi pin phù hợp du khách và người mới.":"Battery-swap e-bikes ideal for tourists and beginners.",
+"Nhận xe ở Huế, trả xe ở Hội An – không phải quay đầu.":"Pick up in Huế, drop off in Hội An. No backtracking.",
+"Đi xa Bà Nà, Hải Vân, Bạch Mã không lo hết điện.":"Ride to Bà Nà, Hải Vân or Bạch Mã without range worries.",
+"Zalo, WhatsApp, WeChat, Kakao, Line – trả lời nhanh.":"Zalo, WhatsApp, WeChat, Kakao, Line. Fast replies.",
+"Nhắn Zalo hoặc WhatsApp để giữ xe và nhận báo giá trong vài phút.":"Message us on Zalo or WhatsApp to reserve and get a quote in minutes.",
+"Thuê xe điện có cần bằng lái không?":"Do I need a licence to rent an e-bike?",
+"Thuê một chiều hoạt động thế nào?":"How does one-way rental work?","Giá đã gồm những gì?":"What does the price include?",
+"Đây là yêu cầu đặt xe, chưa phải xác nhận. Nhân viên sẽ liên hệ lại.":"This is a booking request, not a confirmation. Our team will contact you.",
+"Các dòng xe điện đổi pin được đánh dấu \"không cần bằng lái\". Xe xăng và xe phân khối lớn cần bằng lái hợp lệ.":"Battery-swap e-bikes marked “no licence” need none. Petrol and large-displacement bikes require a valid licence.",
+"Bạn nhận xe ở điểm này và trả ở điểm khác, ví dụ nhận ở Huế và trả ở Hội An. Hãy liên hệ để được xác nhận tuyến.":"Pick up at one branch and return at another, e.g. Huế to Hội An. Contact us to confirm the route.",
+"Giá hiển thị là giá thuê cơ bản theo ngày hoặc theo gói. Vui lòng xác nhận chi tiết (mũ bảo hiểm, đặt cọc, phụ phí) khi đặt xe.":"Prices are the base daily or package rate. Please confirm details (helmets, deposit, extras) when booking.",
+"Xe điện đổi pin EvgoD":"EvgoD battery-swap e-bike","Xe máy điện Hội An":"Hội An e-bike","Xe máy điện Đà Nẵng":"Đà Nẵng e-bike","Xe điện đổi pin Phú Quốc":"Phú Quốc battery-swap e-bike","Xe máy điện 3 bánh":"3-wheel e-bike","Khám phá miền Trung theo cách của bạn":"Explore Central Vietnam your way","Hành trình số 0":"Journey No. 0","Đại hành trình xuyên Việt":"Grand Vietnam crossing","Di sản Huế – Hội An":"Huế – Hội An heritage ride","Huế – Mỹ Sơn – Hội An":"Huế – Mỹ Sơn – Hội An","Hội An – Phong Nha Kẻ Bàng":"Hội An – Phong Nha","Phượt 7 ngày Nam – Tây – Trung":"7-day South–Highlands–Central ride","Tour ẩm thực Đà Nẵng":"Đà Nẵng food tour","Tour ẩm thực Huế":"Huế food tour","Tour ẩm thực Hội An":"Hội An food tour",
+"Không cần bằng lái · Huế, Đà Nẵng, Hội An":"No licence · Huế, Đà Nẵng, Hội An","Không cần bằng lái":"No licence needed","VinFast, không cần bằng lái":"VinFast, no licence needed","An toàn cho người già & người khuyết tật":"Safe for seniors & riders with disabilities","Đà Nẵng → Hội An → Huế → Phong Nha → Đồng Hới":"Đà Nẵng → Hội An → Huế → Phong Nha → Đồng Hới","Tay ga chạy xăng":"Petrol scooter","Côn tay địa hình":"Manual off-road","Scooter cao cấp":"Premium scooter","Cổ điển vượt thời gian":"Timeless classic","Vua xe phượt đường dài":"King of long-distance touring","Một chiều qua đèo Hải Vân":"One-way over Hải Vân Pass","Cung di sản đẹp nhất":"The best heritage route","Cung di sản miền Trung":"Central heritage route","Nhẹ nhàng mà mê ly":"Easygoing and unforgettable","Xe điện & đặc sản địa phương":"E-bike & local specialties","Xe điện & ẩm thực cung đình":"E-bike & royal cuisine","Xe điện & phố cổ về đêm":"E-bike & old town by night","1 ngày":"1 day","2 ngày":"2 days","3 ngày":"3 days","5 ngày":"5 days","7 ngày":"7 days","30 ngày":"30 days","4 giờ":"4 hours"};
+var L="vi",cur="Tất cả",tabs=["Tất cả","Xe điện","Ô tô điện","Xe máy","Một chiều","Tour"],sel=null,orig=new WeakMap();
+var $=function(i){return document.getElementById(i)};
+function tr(x){return L==="en"&&D[x]?D[x]:x}
+function fmt(n){return n.toLocaleString(L==="en"?"en-US":"vi-VN")+(L==="en"?" VND":"đ")}
+function save(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function load(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function walk(){
+var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n;
+while(n=w.nextNode()){var p=n.parentNode.nodeName;if(p==="SCRIPT"||p==="STYLE"||p==="OPTION"||n.parentNode.closest("#detail,#grid,#tabs,#revs,#avg"))continue;
+if(!orig.has(n)){if(!n.nodeValue.trim())continue;orig.set(n,n.nodeValue)}
+var o=orig.get(n),t=o.trim();n.nodeValue=(L==="en"&&D[t])?o.replace(t,D[t]):o}
+$("q").placeholder=L==="en"?"Search bikes, routes…":"Tìm xe, tuyến đường…";
+$("so").options[0].text=L==="en"?"Default":"Mặc định";$("so").options[1].text=L==="en"?"Price: low to high":"Giá tăng dần";$("so").options[2].text=L==="en"?"Price: high to low":"Giá giảm dần";
+$("lg").textContent=L==="en"?"VI":"EN";document.documentElement.lang=L}
+function norm(x){return x.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/đ/g,"d")}
+function render(){
+var t=$("tabs");t.innerHTML="";
+tabs.forEach(function(k){var b=document.createElement("button");b.className="tab"+(k===cur?" on":"");b.textContent=tr(k);b.onclick=function(){cur=k;render()};t.appendChild(b)});
+var q=norm($("q").value.trim()),so=$("so").value;
+var list=P.map(function(p,i){return{p:p,i:i}}).filter(function(o){var p=o.p;return(cur==="Tất cả"||p[0]===cur)&&(!q||norm(p[2]+" "+p[3]+" "+tr(p[2])+" "+tr(p[3])).indexOf(q)>-1)});
+if(so==="1")list.sort(function(a,b){return a.p[5]-b.p[5]});if(so==="2")list.sort(function(a,b){return b.p[5]-a.p[5]});
+var g=$("grid");g.innerHTML="";
+if(!list.length){g.innerHTML='<div class="empty">'+(L==="en"?"No results found.":"Không tìm thấy kết quả.")+'</div>'}
+list.forEach(function(o){var p=o.p,c=C[p[0]],d=document.createElement("article");d.className="card";d.tabIndex=0;
+d.innerHTML='<div class="thumb" style="background:linear-gradient(135deg,'+c[0]+',color-mix(in srgb,'+c[0]+' 60%,#fff))">'+p[1]+'</div><div class="body"><div class="meta"><span>'+tr(p[0])+'</span><span>'+tr(p[4])+'</span></div><h3>'+tr(p[2])+'</h3><p>'+tr(p[3])+'</p><div class="price"><b>'+fmt(p[5])+'</b><a>'+(L==="en"?"Book":"Đặt xe")+'</a></div></div>';
+d.onclick=function(){location.hash="xe-"+o.i};d.onkeydown=function(e){if(e.key==="Enter")location.hash="xe-"+o.i};g.appendChild(d)});
+}
+Object.assign(D,{"Khách nói gì về chúng tôi":"What our guests say","Viết đánh giá":"Write a review","Tất cả xe":"All vehicles","Thông số":"Details","Lịch xe trống":"Availability","Đánh giá":"Reviews","💬 Chat Zalo":"💬 Chat on Zalo"});
+var t=function(v,e){return L==="en"?e:v};
+function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function addD(n){var d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()+n);return d}
+/* ===== DỮ LIỆU ĐỂ BẠN CẬP NHẬT =====
+ BOOKED: chỉ số xe -> các khoảng ngày đã có khách. Dữ liệu dưới đây chỉ là MẪU. */
+var BOOKED={};
+[[8,3,5],[10,6,9],[12,2,4],[0,4,6],[13,1,2]].forEach(function(a){(BOOKED[a[0]]=BOOKED[a[0]]||[]).push([iso(addD(a[1])),iso(addD(a[2]))])});
+/* REVIEWS: k="*" hiện ở mọi xe; k=số thì chỉ hiện ở xe đó. s:1 = đánh giá MẪU, hãy thay bằng đánh giá thật. */
+var REVIEWS=[
+{k:"*",n:"Khách mẫu 1",r:5,tv:"Giao xe đúng giờ, xe sạch và nhân viên hỗ trợ nhiệt tình.",te:"On-time delivery, clean bike and very helpful staff.",s:1},
+{k:"*",n:"Khách mẫu 2",r:5,tv:"Thuê một chiều Huế – Hội An rất tiện, không phải quay lại.",te:"One-way Huế to Hội An was super convenient.",s:1},
+{k:"*",n:"Khách mẫu 3",r:4,tv:"Giá rõ ràng, đặt xe qua Zalo nhanh.",te:"Clear pricing, quick booking via Zalo.",s:1}];
+function booked(i,x){return(BOOKED[i]||[]).some(function(r){return x>=r[0]&&x<=r[1]})}
+function multi(p){return p[0]==="Xe điện"||p[0]==="Xe máy"}
+function stars(r){return"★★★★★".slice(0,r)+"☆☆☆☆☆".slice(r)}
+function revCard(r){return'<div class="rv"><span class="st">'+stars(r.r)+'</span><p>'+(L==="en"?r.te:r.tv)+'</p><b style="font-size:13px">'+r.n+'</b>'+(r.s?'<span class="sm">'+t("Mẫu – thay bằng đánh giá thật","Sample – replace with real review")+'</span>':'')+'</div>'}
+function revMail(name){return"mailto:Themotorbikestation@gmail.com?subject="+encodeURIComponent((L==="en"?"Review: ":"Đánh giá: ")+name)+"&body="+encodeURIComponent(L==="en"?"Name:\nRating (1-5):\nYour review:\n":"Họ tên:\nSố sao (1-5):\nNội dung đánh giá:\n")}
+function revHome(){var a=REVIEWS.length?(REVIEWS.reduce(function(x,r){return x+r.r},0)/REVIEWS.length).toFixed(1):0;
+$("avg").textContent=REVIEWS.length?"★ "+a+" / 5 · "+REVIEWS.length+" "+t("đánh giá","reviews"):"";
+$("revs").innerHTML=REVIEWS.map(revCard).join("");$("wr").href=revMail("The Motorbike Station")}
+var cal,ss,se;
+function nDays(){return multi(P[sel])&&ss&&se?Math.round((new Date(se+"T00:00")-new Date(ss+"T00:00"))/864e5)+1:1}
+function total(){var p=P[sel];return multi(p)?p[5]*nDays():p[5]}
+function fmtD(x){var d=new Date(x+"T00:00");return d.toLocaleDateString(L==="en"?"en-GB":"vi-VN")}
+function sum(){var el=$("dsum");if(!ss){el.textContent=t("Chọn ngày nhận xe trên lịch","Pick a start date on the calendar")}else{el.textContent=fmtD(ss)+(se?" → "+fmtD(se)+" ("+nDays()+" "+t("ngày","days")+")":"")}$("dtot").textContent=fmt(total())}
+function drawCal(){var y=cal.y,m=cal.m,first=new Date(y,m,1),off=(first.getDay()+6)%7,n=new Date(y,m+1,0).getDate(),today=iso(addD(0));
+var mn=first.toLocaleDateString(L==="en"?"en-US":"vi-VN",{month:"long",year:"numeric"});
+var h='<div class="ch"><button class="ib" data-n="-1">‹</button><span>'+mn+'</span><button class="ib" data-n="1">›</button></div><div class="cg">';
+(L==="en"?["Mo","Tu","We","Th","Fr","Sa","Su"]:["T2","T3","T4","T5","T6","T7","CN"]).forEach(function(x){h+="<small>"+x+"</small>"});
+for(var k=0;k<off;k++)h+="<span></span>";
+for(var d=1;d<=n;d++){var x=iso(new Date(y,m,d)),bk=booked(sel,x),past=x<today,c="";
+if(bk)c="bk2";else if(x===ss||x===se)c="on";else if(ss&&se&&x>ss&&x<se)c="in";
+h+='<button class="'+c+'" data-s="'+x+'"'+(bk||past?" disabled":"")+">"+d+"</button>"}
+$("cal").innerHTML=h+"</div>"}
+function pick(x){var p=P[sel];
+if(!multi(p)||!ss||se){ss=x;se=null}
+else if(x<ss){ss=x}
+else{var ok=true;for(var d=new Date(ss+"T00:00");iso(d)<=x;d.setDate(d.getDate()+1))if(booked(sel,iso(d)))ok=false;if(ok)se=x;else ss=x}
+drawCal();sum()}
+function msg(){var p=P[sel],en=L==="en";return[(en?"Booking request: ":"Yêu cầu đặt xe: ")+tr(p[2]),(en?"Name: ":"Họ tên: ")+$("dn").value,(en?"Phone: ":"SĐT: ")+$("dp").value,(en?"Pick-up: ":"Nhận xe: ")+$("dl").value+" – "+$("dsum").textContent,(en?"Estimate: ":"Tạm tính: ")+$("dtot").textContent].join("\n")}
+function ready(){if(!ss){$("dsum").style.outline="2px solid var(--ac)";return false}$("dsum").style.outline="";return true}
+function showDetail(i){sel=i;ss=se=null;var n=new Date();cal={y:n.getFullYear(),m:n.getMonth()};
+var p=P[i],c=C[p[0]],rv=REVIEWS.filter(function(r){return r.k==="*"||r.k===i});
+var lic=p[0]==="Xe điện"?[t("Bằng lái","Licence"),t("Không cần","Not required")]:(p[0]==="Xe máy"||p[0]==="Ô tô điện")?[t("Bằng lái","Licence"),t("Cần bằng lái hợp lệ","Valid licence required")]:null;
+var sp=[[t("Nhóm","Category"),tr(p[0])],[t("Thời lượng","Duration"),tr(p[4])],[t("Giá cơ bản","Base price"),fmt(p[5])]];if(lic)sp.push(lic);
+$("detail").innerHTML='<a class="back" href="#xe">← '+t("Tất cả xe","All vehicles")+'</a><div class="dg"><div>'+
+'<div class="dh" style="background:linear-gradient(135deg,'+c[0]+',color-mix(in srgb,'+c[0]+' 60%,#fff))">'+p[1]+'</div>'+
+'<h2 class="dt">'+tr(p[2])+'</h2><p style="color:var(--mut);margin:0">'+tr(p[3])+'</p>'+
+'<h3>'+t("Thông số","Details")+'</h3><dl class="sp">'+sp.map(function(x){return"<div><dt>"+x[0]+"</dt><dd>"+x[1]+"</dd></div>"}).join("")+'</dl>'+
+'<h3>'+t("Lịch xe trống","Availability")+'</h3><div class="cal" id="cal"></div><p class="note">'+t("Ngày gạch ngang là đã có khách. Lịch tham khảo, nhân viên sẽ xác nhận lại khi nhận yêu cầu.","Struck-through days are booked. For reference only; our team confirms every request.")+'</p>'+
+'<h3>'+t("Đánh giá","Reviews")+'</h3><div class="grid">'+rv.map(revCard).join("")+'</div><p style="margin-top:12px"><a class="ib" href="'+revMail(tr(p[2]))+'">'+t("Viết đánh giá","Write a review")+'</a></p></div>'+
+'<aside class="bk"><div class="price"><b>'+fmt(p[5])+'</b><small style="color:var(--mut)">'+tr(p[4])+'</small></div><div class="sel" id="dsum"></div>'+
+'<div class="f"><label class="w"><span>'+t("Họ tên","Full name")+'</span><input id="dn"></label><label><span>'+t("Số điện thoại","Phone")+'</span><input id="dp" type="tel"></label><label><span>'+t("Điểm nhận","Pick-up city")+'</span><select id="dl"><option>Đà Nẵng</option><option>Hội An</option><option>Huế</option><option>Phú Quốc</option></select></label></div>'+
+'<div class="tot"><span>'+t("Tạm tính","Estimate")+'</span><b id="dtot"></b></div>'+
+'<div class="send"><button class="btn" id="sw">WhatsApp</button><button class="btn" id="sz" style="background:#0068ff">Zalo</button><button class="btn ghost" id="se">Email</button></div><p class="note">'+t("Đây là yêu cầu đặt xe, chưa phải xác nhận. Nhân viên sẽ liên hệ lại.","This is a booking request, not a confirmation. Our team will contact you.")+'</p></aside></div>';
+$("cal").onclick=function(e){var b=e.target.closest("button");if(!b)return;if(b.dataset.n){var d=new Date(cal.y,cal.m+ +b.dataset.n,1);cal={y:d.getFullYear(),m:d.getMonth()};drawCal()}else if(b.dataset.s)pick(b.dataset.s)};
+$("sw").onclick=function(){if(ready())window.open("https://api.whatsapp.com/send/?phone=84922771171&text="+encodeURIComponent(msg()),"_blank")};
+$("se").onclick=function(){if(ready())window.open("mailto:Themotorbikestation@gmail.com?subject="+encodeURIComponent(tr(P[sel][2]))+"&body="+encodeURIComponent(msg()))};
+$("sz").onclick=function(){if(!ready())return;try{navigator.clipboard.writeText(msg())}catch(e){}window.open("https://zalo.me/0922771171","_blank")};
+drawCal();sum()}
+function route(keep){var m=/^#xe-(\d+)$/.exec(location.hash);
+if(m&&P[+m[1]]){$("home").hidden=true;$("detail").hidden=false;showDetail(+m[1]);if(!keep)window.scrollTo(0,0)}
+else{var was=!$("detail").hidden;$("detail").hidden=true;$("home").hidden=false;if(was){var e=$(location.hash.slice(1));if(e)e.scrollIntoView();else window.scrollTo(0,0)}}}
+window.addEventListener("hashchange",function(){route()});
+$("q").oninput=render;$("so").onchange=render;
+$("lg").onclick=function(){L=L==="vi"?"en":"vi";save("tms-lang",L);walk();render();revHome();route(true)};
+$("th").onclick=function(){var r=document.documentElement,d=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme:dark)").matches);var n=d?"light":"dark";r.setAttribute("data-theme",n);save("tms-theme",n)};
+var st=load("tms-theme");if(st)document.documentElement.setAttribute("data-theme",st);
+if(load("tms-lang")==="en")L="en";
+walk();render();revHome();route(true);
+</script>
 </body>
 </html>
